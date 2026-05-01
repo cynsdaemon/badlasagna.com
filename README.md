@@ -1,6 +1,6 @@
 ## Bad Lasagna Comic
 
-This is the repo for **Bad Lasagna**, cozy‑weird comic about cosmic bureaucracy, emotional labor, and the daemons who run it. Toss a coin to the fuel cosmic paperwork.
+This is the repo for **Bad Lasagna**, cozy‑weird comic about cosmic bureaucracy, emotional labor, and the daemons who run it.
 
 New episodes are served fresh every Friday. This project is live at [badlasagna.com](https://badlasagna.com). 
 
