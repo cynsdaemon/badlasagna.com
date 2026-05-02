@@ -28,12 +28,11 @@ archive.json — the single source of truth for all comic episodes
 Stores:
 
 - episode number
-
 - title
-
 - intro text
+- thumbnails
 
-**TODO:** - future metadata like tags or thumbnails
+**TODO:** - future metadata like tags or categories
 
 ### Images
 Comic pages stored as .jpg in /archive/comics/
