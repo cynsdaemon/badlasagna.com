@@ -2,23 +2,36 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Archive - Bad Lasagna Comic</title>
+  <title>Archive - Bad Lasagna</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bad Lasagna Comic</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&family=Coiny&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/main.css" />
-  <link rel="icon" type="image/png" href="img/bl-favicon.png" />
+  <link rel="stylesheet" href="/main.css" />
+  <link rel="icon" type="image/png" href="/img/bl-favicon.png" />
   
 </head>
 <body>
 
 <header>
-  <h1>Bad Lasagna</h1>
+     <div class="logo-group">
+      <img src="/img/bl-no-background.png" alt="Bad Lasagna Logo" class="logo-img" />
+      <h1 class="site-title">BAD LASAGNA Comic</h1>
+    </div>
 </header>
 
 <main>
+ 
+  <!-- Comic Panels  -->
   <img id="comic-img" class="comic-img" alt="Comic page">
 
+   <!-- Title + intro -->
+  <h2 id="comic-title" class="comic-title"></h2>
+  <p id="comic-intro" class="comic-intro"></p>
+
+  <!-- Comic nav -->
   <div class="comic-nav">
     <a id="prev" class="btn purple">Prev</a>
     <a id="next" class="btn pink">Next</a>
@@ -37,7 +50,13 @@ fetch("archive.json")
   .then(res => res.json())
   .then(pages => {
     const index = pages.findIndex(p => p.num === page);
+    const current = pages[index];
 
+    // Set title + intro
+    document.getElementById("comic-title").textContent = current.title || "";
+    document.getElementById("comic-intro").textContent = current.intro || "";
+
+    // Navigation
     const prev = pages[index - 1];
     const next = pages[index + 1];
 
@@ -52,6 +71,7 @@ fetch("archive.json")
     if (!prev) document.getElementById("prev").classList.add("disabled");
     if (!next) document.getElementById("next").classList.add("disabled");
   });
+
 </script>
 
 </body>

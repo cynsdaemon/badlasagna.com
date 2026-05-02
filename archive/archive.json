@@ -1,5 +1,13 @@
 [
-  { "num": "001", "title": "Harriett Has a Sweet Tooth", "file": "001.html" },
-  { "num": "002", "title": "The Bad Lasagna Appears", "file": "002.html" },
-  { "num": "003", "title": "Something Smells Wrong", "file": "003.html" }
+  {
+    "num": "001",
+    "title": "Harriett Has a Sweet Tooth",
+    "file": "001.jpg",
+    "intro": "After a busy week, Harriet finally has time to unwind and decides to have a friend over for movie night."
+  },
+  {
+    "num": "002",
+    "title": "The Bad Lasagna Appears",
+    "intro": "Things get weird fast when the lasagna shows up in places it absolutely should not be."
+  }
 ]

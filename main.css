@@ -97,6 +97,62 @@ body {
   color: #fff;
 }
 
+/* ---------- Comic Viewer Navigation ---------- */
+.comic-nav {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.comic-nav .btn {
+  padding: 0.75rem 1.5rem;
+  font-size: 1.1rem;
+  border-radius: 10px;
+  background-color: #b38bff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: transform 0.15s ease, opacity 0.2s ease;
+}
+
+.comic-nav .btn:hover {
+  transform: translateY(-3px);
+}
+
+/* Disabled state */
+.comic-nav .disabled {
+  opacity: 0.4;
+  pointer-events: none;
+  transform: none;
+}
+
+/* ---------- Comic Image Sizing ---------- */
+.comic-img {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 900px; /* adjust this number to resize */
+  border-radius: 8px;
+}
+
+/* ---------- Comic Title + Intro ---------- */
+.comic-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #FFDB99;
+  margin-bottom: 0.5rem;
+}
+
+.comic-intro {
+  text-align: center;
+  max-width: 700px;
+  margin: 0.5rem auto 2rem auto;
+  color: #dcdcdc;
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
 /* ---------- Responsive ---------- */
 @media (min-width: 600px) {
   .nav-buttons {
@@ -121,7 +177,7 @@ body {
 }
 
 .footer h2 {
-  color: #ffe55c;
+  color: #FFDB99;
   margin-bottom: 0.5rem;
 }
 
@@ -148,7 +204,7 @@ body {
 
 .newsletter-form button {
   padding: 0.75rem 1.5rem;
-  background: #ffe55c;
+  background: #FFDB99;
   color: #0d1b3d;
   border: none;
   border-radius: 8px;
@@ -178,7 +234,7 @@ body {
   border-radius: 50%;
   font-weight: 700;
   color: #0d1b3d;
-  background: #ffe55c;
+  background: #FFDB99;
   text-decoration: none;
   transition: transform 0.15s ease;
 }
