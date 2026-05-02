@@ -22,21 +22,25 @@
     </div>
 </header>
 
-<main>
- 
-  <!-- Comic Panels  -->
-  <img id="comic-img" class="comic-img" alt="Comic page">
+<div class="page-wrapper">
+  <main>
+  
+    <!-- Comic Panels  -->
+    <img id="comic-img" class="comic-img" alt="Comic page">
 
-   <!-- Title + intro -->
-  <h2 id="comic-title" class="comic-title"></h2>
-  <p id="comic-intro" class="comic-intro"></p>
+    <!-- Title + intro -->
+    <h2 id="comic-title" class="comic-title"></h2>
+    <p id="comic-intro" class="comic-intro"></p>
 
-  <!-- Comic nav -->
-  <div class="comic-nav">
-    <a id="prev" class="btn purple">Prev</a>
-    <a id="next" class="btn pink">Next</a>
-  </div>
-</main>
+    <!-- Comic nav -->
+    <div class="comic-nav">
+      <a id="prev" class="btn purple">Prev</a>
+      <a id="next" class="btn pink">Next</a>
+    </div>
+  </main>
+
+</div>
+
 
 <script>
 const params = new URLSearchParams(window.location.search);
