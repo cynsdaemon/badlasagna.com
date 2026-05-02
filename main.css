@@ -1,108 +1,107 @@
-/* ---------- Base Styles ---------- */
+/* =========================================================
+   BASE STYLES
+   ========================================================= */
 body {
-  margin: 0;
-  font-family: "ABeeZee", sans-serif;
-  background-color: #1F0F53; /* dark purple background */
+  background-color: #1F0F53;
   color: #FFDB99;
-}
-
-/* ---------- Global Page Padding ---------- */
-.page-wrapper {
-  max-width: 1100px;   /* keeps content readable on large screens */
-  margin: 0 auto;      /* centers everything */
-  padding: 2rem 1.5rem; /* top/bottom + left/right padding */
-}
-
-/* Extra breathing room for comic pages */
-.comic-img {
-  margin-top: 1.5rem;
-  margin-bottom: 2rem;
-}
-
-.comic-title {
-  margin-top: 1rem;
-}
-
-.comic-intro {
-  margin-bottom: 1.5rem;
-}
-
-.comic-img {
-  background: #111;
-  padding: 1rem;
-  border-radius: 8px;
-}
-
-
-/* ---------- Site fonts ---------- */
-
-.coiny-regular { /* logo font */
-  font-family: "Coiny", system-ui;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.abeezee-regular { /*Site font */
   font-family: "ABeeZee", sans-serif;
-  font-weight: 400;
+  margin: 0;
+}
+
+/* Global Page Wrapper */
+.page-wrapper {
+  margin: 0 auto;
+  max-width: 1100px;
+  padding: 2rem 1.5rem;
+}
+
+/* Global Paragraph Styling */
+p {
+  color: #e6e6e6;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin: 1rem 0 1.5rem 0;
+}
+
+p strong {
+  display: block;
+  font-size: 1.15rem;
+  margin-top: 1.5rem;
+}
+
+/* =========================================================
+   FONTS
+   ========================================================= */
+.coiny-regular {
+  font-family: "Coiny", system-ui;
   font-style: normal;
+  font-weight: 400;
+}
+
+.abeezee-regular {
+  font-family: "ABeeZee", sans-serif;
+  font-style: normal;
+  font-weight: 400;
 }
 
 .abeezee-regular-italic {
   font-family: "ABeeZee", sans-serif;
-  font-weight: 400;
   font-style: italic;
+  font-weight: 400;
 }
 
-/* ---------- Header Layout ---------- */
+/* =========================================================
+   HEADER
+   ========================================================= */
 .hero {
-  padding: 3rem 1.5rem;
-  max-width: 900px;
   margin: 0 auto;
+  max-width: 900px;
+  padding: 3rem 1.5rem;
   text-align: center;
 }
 
-/* Logo + Title */
 .logo-group {
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 1rem;
 }
 
 .logo-img {
-  width: 20%;
   height: auto;
+  width: 20%;
 }
 
 .site-title {
+  color: #FFDB99;
   font-family: "Coiny", system-ui;
   font-size: 3rem;
   font-weight: 800;
-  color: #FFDB99; /* bright yellow */
   letter-spacing: 2px;
   margin: 0;
 }
 
-/* ---------- Navigation Buttons ---------- */
+/* =========================================================
+   NAVIGATION BUTTONS
+   ========================================================= */
 .nav-buttons {
-  margin-top: 2.5rem;
+  align-items: center;
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  align-items: center;
+  margin-top: 2.5rem;
 }
 
 .btn {
+  border-radius: 12px;
+  color: #0d1b3d;
   display: inline-block;
-  padding: 1rem 2rem;
   font-size: 1.25rem;
   font-weight: 600;
-  border-radius: 12px;
-  text-decoration: none;
-  color: #0d1b3d;
-  width: 260px;
+  min-width: 200px;
+  padding: 1rem 2rem;
   text-align: center;
+  text-decoration: none;
   transition: transform 0.15s ease;
 }
 
@@ -111,35 +110,67 @@ body {
 }
 
 /* Button Colors */
-.btn-yellow {
-  background-color: #ffe55c;
+.btn-yellow { background-color: #ffe55c; }
+.btn-purple { background-color: #b38bff; color: #fff; }
+.btn-pink   { background-color: #ff6fae; color: #fff; }
+
+/* Responsive Nav */
+@media (min-width: 600px) {
+  .nav-buttons {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
 
-.btn-purple {
-  background-color: #b38bff;
-  color: #fff;
+/* =========================================================
+   COMIC VIEWER
+   ========================================================= */
+
+/* Comic Image */
+.comic-img {
+  background: #111;
+  border-radius: 8px;
+  display: block;
+  margin: 1.5rem auto 2rem auto;
+  max-width: 900px;
+  padding: 1rem;
+  width: 100%;
 }
 
-.btn-pink {
-  background-color: #ff6fae;
-  color: #fff;
+/* Comic Title + Intro */
+.comic-title {
+  color: #FFDB99;
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 1rem 0 0.5rem 0;
+  text-align: center;
 }
 
-/* ---------- Comic Viewer Navigation ---------- */
+.comic-intro {
+  color: #dcdcdc;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  margin: 0.5rem auto 2rem auto;
+  max-width: 700px;
+  text-align: center;
+}
+
+/* Comic Navigation */
 .comic-nav {
-  margin-top: 2rem;
   display: flex;
-  justify-content: center;
   gap: 1rem;
+  justify-content: center;
+  margin-top: 2rem;
 }
 
 .comic-nav .btn {
-  padding: 0.75rem 1.5rem;
-  font-size: 1.1rem;
-  border-radius: 10px;
   background-color: #b38bff;
-  text-decoration: none;
+  border-radius: 10px;
+  font-size: 1.1rem;
   font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
   transition: transform 0.15s ease, opacity 0.2s ease;
 }
 
@@ -147,61 +178,81 @@ body {
   transform: translateY(-3px);
 }
 
-/* Disabled state */
 .comic-nav .disabled {
   opacity: 0.4;
   pointer-events: none;
   transform: none;
 }
 
-/* ---------- Comic Image Sizing ---------- */
-.comic-img {
-  display: block;
-  margin: 0 auto;
-  width: 100%;
-  max-width: 900px; /* adjust this number to resize */
-  border-radius: 8px;
+/* =========================================================
+   CHARACTER GRID + CARDS
+   ========================================================= */
+.character-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr;
+  margin-top: 1.5rem;
 }
 
-/* ---------- Comic Title + Intro ---------- */
-.comic-title {
-  text-align: center;
-  font-size: 2rem;
+@media (min-width: 700px) {
+  .character-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.character-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  backdrop-filter: blur(4px);
+  padding: 1.5rem;
+}
+
+.character-card h3 {
+  color: #ffe55c;
+  font-size: 1.4rem;
   font-weight: 700;
-  color: #FFDB99;
-  margin-bottom: 0.5rem;
+  margin: 0 0 0.75rem 0;
 }
 
-.comic-intro {
-  text-align: center;
-  max-width: 700px;
-  margin: 0.5rem auto 2rem auto;
-  color: #dcdcdc;
-  font-size: 1.1rem;
-  line-height: 1.5;
+.character-card p {
+  color: #e6e6e6;
+  line-height: 1.6;
+  margin: 0;
 }
 
-/* ---------- Responsive ---------- */
-@media (min-width: 600px) {
-  .nav-buttons {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .btn {
-    width: auto;
-    min-width: 200px;
-  }
+/* Character Icons (Circular) */
+.character-icon {
+  border: 2px solid rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+  height: 80px;
+  margin-bottom: 1rem;
+  object-fit: cover;
+  width: 80px;
 }
 
-/* ---------- Footer ---------- */
+/* Placeholder Icons */
+.character-icon.placeholder {
+  align-items: center;
+  background: rgba(255, 255, 255, 0.08);
+  color: #ffe55c;
+  display: flex;
+  font-family: "Coiny", sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+  justify-content: center;
+  text-transform: uppercase;
+}
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
 .footer {
+  background: #1F0F53;
+  border-top: 2px solid #ffe55c33;
   margin-top: 4rem;
   padding: 3rem 1.5rem;
-  background: #1F0F53;
   text-align: center;
-  border-top: 2px solid #ffe55c33;
 }
 
 .footer h2 {
@@ -215,29 +266,29 @@ body {
 
 /* Newsletter */
 .newsletter-form {
-  margin-top: 1rem;
   display: flex;
-  justify-content: center;
-  gap: 0.5rem;
   flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-top: 1rem;
 }
 
 .newsletter-form input {
-  padding: 0.75rem 1rem;
-  border-radius: 8px;
   border: none;
-  width: 260px;
+  border-radius: 8px;
   font-size: 1rem;
+  padding: 0.75rem 1rem;
+  width: 260px;
 }
 
 .newsletter-form button {
-  padding: 0.75rem 1.5rem;
   background: #FFDB99;
-  color: #0d1b3d;
   border: none;
   border-radius: 8px;
-  font-weight: 600;
+  color: #0d1b3d;
   cursor: pointer;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
   transition: transform 0.15s ease;
 }
 
@@ -247,37 +298,36 @@ body {
 
 /* Social Icons */
 .social-icons {
-  margin-top: 2rem;
   display: flex;
-  justify-content: center;
   gap: 1rem;
+  justify-content: center;
+  margin-top: 2rem;
 }
 
 .icon {
-  display: inline-flex;
-  justify-content: center;
   align-items: center;
-  width: 42px;
-  height: 42px;
-  border-radius: 50%;
-  font-weight: 700;
-  color: #0d1b3d;
   background: #FFDB99;
+  border-radius: 50%;
+  color: #0d1b3d;
+  display: inline-flex;
+  font-weight: 700;
+  height: 42px;
+  justify-content: center;
   text-decoration: none;
   transition: transform 0.15s ease;
+  width: 42px;
 }
 
 .icon:hover {
   transform: translateY(-3px);
 }
 
-.ko-fi-logo{
+.ko-fi-logo {
   width: 50px;
 }
 
-/* Footer note */
 .footer-note {
-  margin-top: 2rem;
-  font-size: 0.9rem;
   color: #aaa;
+  font-size: 0.9rem;
+  margin-top: 2rem;
 }
