@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Archive – Bad Lasagna</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&family=Coiny&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../main.css">
+  <link rel="icon" type="image/png" href="/img/favicon.png">
+</head>
+
+<body>
+<div class="page-wrapper">
+
+  <header class="hero">
+    <div class="logo-group">
+      <img src="/img/logo-no-background.png" alt="Bad Lasagna Logo" class="logo-img">
+      <h1 class="site-title">BAD LASAGNA Archive</h1>
+    </div>
+  </header>
+
+  <main>
+    <h2>All Episodes</h2>
+    <div id="archive-list" class="archive-list"></div>
+  </main>
+
+</div>
+
+<script>
+fetch("archive.json")
+  .then(res => res.json())
+  .then(pages => {
+    const container = document.getElementById("archive-list");
+
+    pages.forEach(p => {
+      const item = document.createElement("div");
+      item.className = "archive-item";
+
+      item.innerHTML = `
+        <a href="page.html?p=${p.num}" class="archive-link">
+          <div class="archive-episode">
+            <span class="archive-num">#${p.num}</span>
+            <span class="archive-title">${p.title}</span>
+          </div>
+        </a>
+      `;
+
+      container.appendChild(item);
+    });
+  });
+</script>
+
+        <!-- Footer -->
+    <footer class="footer">
+      <div class="newsletter">
+        <h2>Subscribe for Updates</h2>
+        <p>Get new comic pages, behind-the-scenes notes, and announcements.</p>
+
+        <form class="newsletter-form">
+          <input type="email" placeholder="Your email address" required />
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+
+      <div class="social-icons">
+          <p>Follow Bad Lasagna Comic on Social!</p>
+        <a href="https://ko-fi.com/badlasagna"><img src="/img/kofi_symbol.png" alt="ko-fi logo" class="ko-fi-logo"</a>
+      </div>
+
+      <p class="footer-note">© 2025 - Today: Bad Lasagna. All rights reserved.</p>    
+    </footer>
+  </div>
+
+
+</body>
+</html>

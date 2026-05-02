@@ -245,6 +245,53 @@ p strong {
 }
 
 /* =========================================================
+   ARCHIVE PAGE
+   ========================================================= */
+
+.archive-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.archive-item {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  padding: 1rem 1.25rem;
+  transition: transform 0.15s ease, background 0.2s ease;
+}
+
+.archive-item:hover {
+  transform: translateY(-3px);
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.archive-link {
+  color: #ffe55c;
+  text-decoration: none;
+  display: block;
+}
+
+.archive-episode {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.archive-num {
+  font-family: "Coiny", system-ui;
+  font-size: 1.4rem;
+  color: #ffdb99;
+}
+
+.archive-title {
+  font-size: 1.2rem;
+  color: #e6e6e6;
+}
+
+/* =========================================================
    FOOTER
    ========================================================= */
 .footer {
