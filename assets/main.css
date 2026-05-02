@@ -1,0 +1,199 @@
+/* ---------- Base Styles ---------- */
+body {
+  margin: 0;
+  font-family: "ABeeZee", sans-serif;
+  background-color: #1F0F53; /* dark purple background */
+  color: #FFDB99;
+}
+
+/* ---------- Site fonts ---------- */
+
+.coiny-regular { /* logo font */
+  font-family: "Coiny", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.abeezee-regular { /*Site font */
+  font-family: "ABeeZee", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.abeezee-regular-italic {
+  font-family: "ABeeZee", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+/* ---------- Header Layout ---------- */
+.hero {
+  padding: 3rem 1.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Logo + Title */
+.logo-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo-img {
+  width: 20%;
+  height: auto;
+}
+
+.site-title {
+  font-family: "Coiny", system-ui;
+  font-size: 3rem;
+  font-weight: 800;
+  color: #FFDB99; /* bright yellow */
+  letter-spacing: 2px;
+  margin: 0;
+}
+
+/* ---------- Navigation Buttons ---------- */
+.nav-buttons {
+  margin-top: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+
+.btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  border-radius: 12px;
+  text-decoration: none;
+  color: #0d1b3d;
+  width: 260px;
+  text-align: center;
+  transition: transform 0.15s ease;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+}
+
+/* Button Colors */
+.btn-yellow {
+  background-color: #ffe55c;
+}
+
+.btn-purple {
+  background-color: #b38bff;
+  color: #fff;
+}
+
+.btn-pink {
+  background-color: #ff6fae;
+  color: #fff;
+}
+
+/* ---------- Responsive ---------- */
+@media (min-width: 600px) {
+  .nav-buttons {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .btn {
+    width: auto;
+    min-width: 200px;
+  }
+}
+
+/* ---------- Footer ---------- */
+.footer {
+  margin-top: 4rem;
+  padding: 3rem 1.5rem;
+  background: #1F0F53;
+  text-align: center;
+  border-top: 2px solid #ffe55c33;
+}
+
+.footer h2 {
+  color: #ffe55c;
+  margin-bottom: 0.5rem;
+}
+
+.footer p {
+  color: #dcdcdc;
+}
+
+/* Newsletter */
+.newsletter-form {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.newsletter-form input {
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  border: none;
+  width: 260px;
+  font-size: 1rem;
+}
+
+.newsletter-form button {
+  padding: 0.75rem 1.5rem;
+  background: #ffe55c;
+  color: #0d1b3d;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.15s ease;
+}
+
+.newsletter-form button:hover {
+  transform: translateY(-3px);
+}
+
+/* Social Icons */
+.social-icons {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.icon {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  font-weight: 700;
+  color: #0d1b3d;
+  background: #ffe55c;
+  text-decoration: none;
+  transition: transform 0.15s ease;
+}
+
+.icon:hover {
+  transform: translateY(-3px);
+}
+
+.ko-fi-logo {
+  width: 50px;
+}
+
+/* Footer note */
+.footer-note {
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: #aaa;
+}

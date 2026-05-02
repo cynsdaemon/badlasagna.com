@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Archive - Bad Lasagna Comic</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&family=Coiny&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/main.css" />
+  <link rel="icon" type="image/png" href="img/bl-favicon.png" />
+  
+</head>
+<body>
+
+<header>
+  <h1>Bad Lasagna</h1>
+</header>
+
+<main>
+  <img id="comic-img" class="comic-img" alt="Comic page">
+
+  <div class="comic-nav">
+    <a id="prev" class="btn purple">Prev</a>
+    <a id="next" class="btn pink">Next</a>
+  </div>
+</main>
+
+<script>
+const params = new URLSearchParams(window.location.search);
+const page = params.get("p") || "001";
+
+// Load the image
+document.getElementById("comic-img").src = `../comics/${page}.jpg`;
+
+// Load archive.json to determine next/prev
+fetch("archive.json")
+  .then(res => res.json())
+  .then(pages => {
+    const index = pages.findIndex(p => p.num === page);
+
+    const prev = pages[index - 1];
+    const next = pages[index + 1];
+
+    document.getElementById("prev").href = prev
+      ? `page.html?p=${prev.num}`
+      : "#";
+
+    document.getElementById("next").href = next
+      ? `page.html?p=${next.num}`
+      : "#";
+
+    if (!prev) document.getElementById("prev").classList.add("disabled");
+    if (!next) document.getElementById("next").classList.add("disabled");
+  });
+</script>
+
+</body>
+</html>
