@@ -3,62 +3,98 @@
 <head>
   <meta charset="UTF-8">
   <title>Archive - Bad Lasagna</title>
-  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bad Lasagna Comic</title>
+  
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&family=Coiny&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/main.css" />
-  <link rel="icon" type="image/png" href="/img/bl-favicon.png" />
-  
-</head>
-<body>
-<div class="page-wrapper"></div>
-  <header>
-      <div class="logo-group">
-        <img src="/img/bl-no-background.png" alt="Bad Lasagna Logo" class="logo-img" />
-        <h1 class="site-title">BAD LASAGNA Comic</h1>
-      </div>
 
-    
+  <link rel="stylesheet" href="../main.css" />
+  <link rel="icon" type="image/png" href="/img/bl-favicon.png" />
+</head>
+
+<body>
+
+<div class="page-wrapper">
+
+  <header>
+    <div class="logo-group">
+      <img src="/img/bl-no-background.png" alt="Bad Lasagna Logo" class="logo-img" />
+      <h1 class="site-title">BAD LASAGNA Comic</h1>
+    </div>
   </header>
 
-
   <main>
-  
-    <!-- Comic Panels  -->
+
+    <!-- Comic Image -->
     <img id="comic-img" class="comic-img" alt="Comic page">
 
-    <!-- Title + intro -->
+    <!-- Title + Intro -->
     <h2 id="comic-title" class="comic-title"></h2>
     <p id="comic-intro" class="comic-intro"></p>
 
-    <!-- Comic nav -->
+    <!-- Navigation -->
     <div class="comic-nav">
       <a id="prev" class="btn purple">Prev</a>
       <a id="next" class="btn pink">Next</a>
     </div>
+
   </main>
 
-</div>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="newsletter">
+      <h2>Subscribe for Updates</h2>
+      <p>Get new comic pages, behind-the-scenes notes, and announcements.</p>
 
+      <form class="newsletter-form">
+        <input type="email" placeholder="Your email address" required />
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+
+    <div class="social-icons">
+      <p>Follow Bad Lasagna Comic on Social!</p>
+      <a href="https://ko-fi.com/badlasagna">
+        <img src="/img/kofi_symbol.png" alt="ko-fi logo" class="ko-fi-logo">
+      </a>
+    </div>
+
+    <nav class="nav-buttons">
+      <a href="/about.html" class="btn btn-yellow">About</a>
+      <a href="page.html?p=latest" class="btn btn-purple">Read the Archives</a>
+      <a href="https://ko-fi.com/badlasagna" class="btn btn-pink">Support My Comic!</a>
+    </nav>
+
+    <p class="footer-note">© 2025 - Today: Bad Lasagna. All rights reserved.</p>
+  </footer>
+
+</div> <!-- END page-wrapper -->
 
 <script>
 const params = new URLSearchParams(window.location.search);
-const page = params.get("p") || "001";
+let page = params.get("p") || "001";
 
-// Load the image
-document.getElementById("comic-img").src = `../comics/${page}.jpg`;
-
-// Load archive.json to determine next/prev
+// Load archive.json once
 fetch("archive.json")
   .then(res => res.json())
   .then(pages => {
+
+    // If user requested "latest", redirect to newest comic
+    if (page === "latest") {
+      const newest = pages[pages.length - 1].num;
+      window.location.href = `page.html?p=${newest}`;
+      return;
+    }
+
+    // Load image
+    document.getElementById("comic-img").src = `../comics/${page}.jpg`;
+
+    // Find current comic entry
     const index = pages.findIndex(p => p.num === page);
     const current = pages[index];
 
-    // Set title + intro
+    // Title + intro
     document.getElementById("comic-title").textContent = current.title || "";
     document.getElementById("comic-intro").textContent = current.intro || "";
 
@@ -66,46 +102,13 @@ fetch("archive.json")
     const prev = pages[index - 1];
     const next = pages[index + 1];
 
-    document.getElementById("prev").href = prev
-      ? `page.html?p=${prev.num}`
-      : "#";
-
-    document.getElementById("next").href = next
-      ? `page.html?p=${next.num}`
-      : "#";
+    document.getElementById("prev").href = prev ? `page.html?p=${prev.num}` : "#";
+    document.getElementById("next").href = next ? `page.html?p=${next.num}` : "#";
 
     if (!prev) document.getElementById("prev").classList.add("disabled");
     if (!next) document.getElementById("next").classList.add("disabled");
   });
-
 </script>
-
- <!-- Footer -->
-    <footer class="footer">
-      <div class="newsletter">
-        <h2>Subscribe for Updates</h2>
-        <p>Get new comic pages, behind-the-scenes notes, and announcements.</p>
-
-        <form class="newsletter-form">
-          <input type="email" placeholder="Your email address" required />
-          <button type="submit">Subscribe</button>
-        </form>
-      </div>
-
-      <div class="social-icons">
-          <p>Follow Bad Lasagna Comic on Social!</p>
-        <a href="https://ko-fi.com/badlasagna"><img src="/img/kofi_symbol.png" alt="ko-fi logo" class="ko-fi-logo"</a>
-
-      </div>
-
-        <nav class="nav-buttons">
-          <a href="/about.html" class="btn btn-yellow">About</a>
-          <a href="archive/page.html?p=001" class="btn btn-purple">Read the Archives</a>
-          <a href="https://ko-fi.com/badlasagna" class="btn btn-pink">Support My Comic!</a>
-      </nav>
-      <p class="footer-note">© 2025 - Today: Bad Lasagna. All rights reserved.</p>    
-    </footer>
-  </div>
 
 </body>
 </html>

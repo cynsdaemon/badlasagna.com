@@ -27,6 +27,12 @@ body {
   margin-bottom: 1.5rem;
 }
 
+.comic-img {
+  background: #111;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
 
 /* ---------- Site fonts ---------- */
 
@@ -265,7 +271,7 @@ body {
   transform: translateY(-3px);
 }
 
-.ko-fi-logo {
+.ko-fi-logo{
   width: 50px;
 }
 
