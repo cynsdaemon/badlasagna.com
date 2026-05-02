@@ -366,6 +366,8 @@ p strong {
   font-size: 1.2rem;
   color: #ffdb99;
 }
+
+/* Auto generates a monogram for comic thumbnails */
 .bl-monogram {
   width: 120px;
   height: 120px;
@@ -379,6 +381,21 @@ p strong {
   color: #ffe55c;
   border: 2px solid rgba(255, 255, 255, 0.15);
 }
+/* Soft hover effect for thumbnails */
+.archive-thumb {
+  transition: transform 0.15s ease, box-shadow 0.2s ease;
+}
+
+.archive-thumb:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(255, 229, 92, 0.25); /* soft yellow glow */
+}
+
+/* Slightly softer look for the fallback BL monogram */
+.archive-thumb[src*="default.svg"] {
+  opacity: 0.9;
+}
+
 
 /* =========================================================
    FOOTER
