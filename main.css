@@ -291,6 +291,19 @@ p strong {
   color: #e6e6e6;
 }
 
+/* Resource Lists */
+.resource-list {
+  margin: 1rem 0 2rem 1.25rem;
+  padding: 0;
+  color: #e6e6e6;
+  line-height: 1.6;
+}
+
+.resource-list li {
+  margin-bottom: 0.5rem;
+}
+
+
 /* =========================================================
    FOOTER
    ========================================================= */
