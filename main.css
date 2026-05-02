@@ -396,6 +396,13 @@ p strong {
   opacity: 0.9;
 }
 
+/* 404 Page */
+.not-found {
+  text-align: center;
+  max-width: 700px;
+  margin: 2rem auto;
+}
+
 
 /* =========================================================
    FOOTER

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>404 – Lost in the Void</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&family=Coiny&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="main.css">
+  <link rel="icon" type="image/png" href="img/favicon.png">
+
+  <style>
+    /* Floating noodle animation */
+    .noodle {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 140px;
+      height: 140px;
+      transform: translate(-50%, -50%);
+      opacity: 0.15;
+      animation: floaty 6s ease-in-out infinite;
+      pointer-events: none;
+    }
+
+    @keyframes floaty {
+      0%   { transform: translate(-50%, -50%) rotate(0deg); }
+      50%  { transform: translate(-50%, -55%) rotate(6deg); }
+      100% { transform: translate(-50%, -50%) rotate(0deg); }
+    }
+
+    .not-found {
+      text-align: center;
+      max-width: 700px;
+      margin: 2rem auto;
+      position: relative;
+      z-index: 2;
+    }
+  </style>
+</head>
+
+<body>
+<div class="page-wrapper">
+
+  <header class="hero">
+    <div class="logo-group">
+      <img src="img/logo-no-background.png" alt="Bad Lasagna Logo" class="logo-img">
+      <h1 class="site-title">404 – Lost in the Cosmic Pantry</h1>
+    </div>
+  </header>
+
+  <!-- Floating lasagna noodle silhouette -->
+  <img src="img/favicon.png" alt="" class="noodle">
+
+  <main class="not-found">
+    <p>
+      You’ve drifted into a region of the universe that doesn’t exist.<br>
+      A cosmic clerk probably misfiled this page under “Misc. Pasta Entities.”
+    </p>
+
+    <p>
+      Don’t worry — the void is friendly, but it’s not very helpful.
+    </p>
+
+    <nav class="nav-buttons">
+      <a href="/" class="btn btn-yellow">Return Home</a>
+      <a href="/archive/page.html?p=latest" class="btn btn-purple">Read Latest Comic</a>
+      <a href="/archive/index.html" class="btn btn-pink">Browse the Archive</a>
+    </nav>
+  </main>
+
+</div>
+</body>
+</html>
