@@ -33,7 +33,7 @@ Stores:
 
 - intro text
 
-- [] **TODO:** (optional) - future metadata like tags or thumbnails
+**TODO:** - future metadata like tags or thumbnails
 
 ### Images
 Comic pages stored as .jpg in /archive/comics/
