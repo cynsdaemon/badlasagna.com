@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Blog Archive – Bad Lasagna</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&family=Coiny&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../main.css">
+  <link rel="icon" type="image/png" href="/img/bl-favicon.png">
+</head>
+
+<body>
+<div class="page-wrapper">
+
+  <header class="hero">
+    <div class="logo-group">
+      <img src="/img/bl-no-background.png" alt="Bad Lasagna Logo" class="logo-img">
+      <h1 class="site-title">BAD LASAGNA Blog</h1>
+    </div>
+  </header>
+
+  <main>
+    <h2>All Blog Posts</h2>
+    <div id="blog-list" class="archive-list"></div>
+  </main>
+
+</div>
+
+<script>
+fetch("blog.json")
+  .then(res => res.json())
+  .then(posts => {
+    const container = document.getElementById("blog-list");
+
+    posts.forEach(p => {
+      const item = document.createElement("div");
+      item.className = "archive-item";
+
+      item.innerHTML = `
+        <a href="post.html?p=${p.num}" class="archive-link">
+          <div class="archive-episode">
+            <span class="archive-num">#${p.num}</span>
+            <span class="archive-title">${p.title}</span>
+            <span class="archive-date">${p.date}</span>
+          </div>
+        </a>
+      `;
+
+      container.appendChild(item);
+    });
+  });
+</script>
+
+</body>
+</html>

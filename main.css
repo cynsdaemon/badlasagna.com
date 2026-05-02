@@ -303,6 +303,69 @@ p strong {
   margin-bottom: 0.5rem;
 }
 
+/* =========================================================
+   BLOG STYLING
+   ========================================================= */
+
+.blog-content {
+  max-width: 750px;
+  margin: 2rem auto;
+  color: #e6e6e6;
+  line-height: 1.7;
+}
+
+.blog-content h1,
+.blog-content h2,
+.blog-content h3 {
+  color: #FFDB99;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.blog-content img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin: 1.5rem 0;
+}
+
+.archive-date {
+  color: #aaa;
+  font-size: 0.9rem;
+  margin-left: auto;
+}
+
+/* =========================================================
+   ARCHIVE THUMBNAILS
+   ========================================================= */
+
+.archive-item-inner {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.archive-thumb {
+  width: 120px;
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.archive-meta {
+  display: flex;
+  flex-direction: column;
+}
+
+.archive-title {
+  font-size: 1.2rem;
+  color: #e6e6e6;
+}
+
+.archive-num {
+  font-family: "Coiny", system-ui;
+  font-size: 1.2rem;
+  color: #ffdb99;
+}
 
 /* =========================================================
    FOOTER

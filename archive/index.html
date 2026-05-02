@@ -39,12 +39,14 @@ fetch("archive.json")
     pages.forEach(p => {
       const item = document.createElement("div");
       item.className = "archive-item";
-
       item.innerHTML = `
         <a href="page.html?p=${p.num}" class="archive-link">
-          <div class="archive-episode">
-            <span class="archive-num">#${p.num}</span>
-            <span class="archive-title">${p.title}</span>
+          <div class="archive-item-inner">
+            <img src="${p.thumb}" alt="Thumbnail for episode ${p.num}" class="archive-thumb">
+            <div class="archive-meta">
+              <span class="archive-num">#${p.num}</span>
+              <span class="archive-title">${p.title}</span>
+            </div>
           </div>
         </a>
       `;
