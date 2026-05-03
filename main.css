@@ -528,57 +528,6 @@ a[href^="http"]:not([href*="badlasagna"]):hover {
   transform: translateY(-3px);
 }
 
-/* =========================================================
-   SOCIAL ICONS — Unified, On-Brand, Glow Hover
-   ========================================================= */
-
-/* Wrapper stays centered and responsive */
-.social-icons {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1.25rem;
-  margin-top: 2rem;
-  flex-wrap: wrap;
-}
-
-/* Base icon style */
-.icon {
-  width: 48px;
-  height: 48px;
-  background: #FFDB99; /* brand yellow */
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none !important;
-  border-bottom: none !important;
-  transition: transform 0.2s ease, box-shadow 0.25s ease, background 0.25s ease;
-  overflow: hidden;
-}
-
-/* Icon images inside the circle */
-.icon img {
-  width: 26px;
-  height: 26px;
-  object-fit: contain;
-}
-
-/* Hover glow — soft brand pink/purple aura */
-.icon:hover {
-  transform: translateY(-4px);
-  background: #ff7bd5; /* brand pink */
-  box-shadow: 0 0 12px rgba(255, 123, 213, 0.6),
-              0 0 20px rgba(179, 139, 255, 0.4);
-}
-
-/* Active press */
-.icon:active {
-  transform: translateY(-1px);
-  background: #b38bff; /* brand purple */
-}
-
-
 .ko-fi-logo {
   width: 40px
 }
