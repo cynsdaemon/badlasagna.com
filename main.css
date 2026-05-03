@@ -631,6 +631,17 @@ button:focus,
 
 }
 
+.aside {
+  background: #0d1b3d;
+  border-left: 4px solid #FF5DB2;
+  padding: 1rem 1.25rem;
+  margin: 1.5rem 0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #FF5DB2;
+  border-radius: 4px;
+}
+
 /* Mobile scaling */
 @media (max-width: 480px) {
   .icon {
