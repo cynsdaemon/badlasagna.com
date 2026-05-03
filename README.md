@@ -42,7 +42,7 @@ Character icons stored in /img/
 Placeholder icons auto‑generate initials if no image is provided
 
 ### Site Icons
-- Instagram icon made by [Flaticon](https://www.flaticon.com).
+- Instagram icon made by [Flaticon](https://www.flaticon.com)
 - Github icon made by [riajulislam](https://www.flaticon.com/authors/riajulislam), courtesy of [Flaticon](https://www.flaticon.com)
 
 For **feedback** and suggestions, feel free to [open an issue on Github](https://github.com/cynsdaemon/badlasagna.com/issues) for this project. This project is built with love :heart: coffee :coffee: and an awesome playlist :musical_note:. Copyright &copy; 2025 - Today.
