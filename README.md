@@ -42,7 +42,7 @@ Character icons stored in /img/
 Placeholder icons auto‑generate initials if no image is provided
 
 ### Site Icons
-- Instagram icon made by [Flaticon](https://www.flaticon.com)
+- Instagram icon made by [Magnific](https://www.magnific.com) formerly Freepik, courtesy of [Flaticon](https://www.flaticon.com) 
 - Github icon made by [riajulislam](https://www.flaticon.com/authors/riajulislam), courtesy of [Flaticon](https://www.flaticon.com)
 - Email icon made by meaicon, courtesy of [Flaticon](https://www.flaticon.com)
 
