@@ -82,39 +82,65 @@ p strong {
 }
 
 /* =========================================================
-   EXTERNAL LINKS (Brand Colors)
+   INTERNAL LINKS
+   ========================================================= */
+a.internal-link {
+  color: #FFDB99;
+  text-decoration: underline dashed;
+  text-decoration-color: #FFDB99;
+  text-underline-offset: 3px;
+  font-weight: 600;
+  transition: color 0.2s ease, text-decoration-color 0.2s ease;
+}
+
+a.internal-link:hover,
+a.internal-link:focus {
+  color: #FF5DB2;
+  text-decoration-color: #FF5DB2;
+}
+
+/* =========================================================
+   EXTERNAL LINKS
    ========================================================= */
 
 .external-link {
-  color: #ffe55c; /* brand yellow */
+  color: #FFDB99; /* primary gold */
   text-decoration: none;
-  border-bottom: 2px solid rgba(255, 229, 92, 0.4);
+  border-bottom: 2px solid rgba(255, 219, 153, 0.4);
   padding-bottom: 2px;
   transition: color 0.2s ease, border-color 0.2s ease;
 }
 
 .external-link:hover {
-  color: #ff7bd5; /* brand pink */
-  border-color: rgba(255, 123, 213, 0.6);
+  color: #FF5DB2; /* accent pink */
+  border-color: rgba(255, 93, 178, 0.6);
 }
 
 .external-link:active {
-  color: #c59cff; /* brand purple */
-  border-color: rgba(197, 156, 255, 0.6);
+  color: #C6B3FF; /* soft purple highlight */
+  border-color: rgba(198, 179, 255, 0.6);
 }
 
+/* Arrow denotes an external link */
 .external-link::after {
   content: "↗";
   font-size: 0.8em;
   margin-left: 4px;
   opacity: 0.7;
-  transition: opacity 0.2s ease;
+  transition: opacity 0.2s ease, color 0.2s ease;
+  color: #FFDB99; /* match default gold */
 }
 
 .external-link:hover::after {
   opacity: 1;
+  color: #FF5DB2; /* match hover pink */
 }
 
+.external-link:active::after {
+  color: #C6B3FF; /* match active purple */
+}
+
+/* Ignore links that contain the follow in the URL */
 a[href^="http"]
   :not([href*="badlasagna"])
   :not([href*="heycynwrites"])
@@ -125,7 +151,6 @@ a[href^="http"]
   padding-bottom: 2px;
 }
 
-
 a[href^="http"]
 :not([href*="badlasagna"])
 :not([href*="heycynwrites"])
@@ -135,6 +160,7 @@ a[href^="http"]
   border-color: rgba(255, 123, 213, 0.6);
 }
 
+/* Ignore icons; don't style icons the same as general links */
 .icon {
   border-bottom: none !important;
   text-decoration: none !important;
@@ -456,7 +482,10 @@ a[href^="http"]
   opacity: 0.9;
 }
 
-/* 404 Page */
+/* =========================================================
+   404 Page
+   ========================================================= */
+
 .not-found {
   text-align: center;
   max-width: 700px;
@@ -619,10 +648,10 @@ button:focus,
   transform: translateY(-3px);
 }
 
+/* Official Social Icons */
 .ko-fi-logo {
   width: 40px
 }
-
 
 .instagram-icon, 
 .github-icon, 
@@ -631,6 +660,7 @@ button:focus,
 
 }
 
+/* Aside and notes */
 .aside {
   background: #0d1b3d;
   border-left: 4px solid #FF5DB2;
