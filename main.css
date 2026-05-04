@@ -483,6 +483,112 @@ a[href^="http"]
 }
 
 /* =========================================================
+   COMIC DESCRIPTION (COLLAPSIBLE)
+   ========================================================= */
+
+.comic-description summary {
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #FFDB99;
+  text-align: center;
+  padding: 0.5rem 0;
+  list-style: none;          /* Removes Firefox default arrow */
+}
+
+/* Remove ALL default markers across browsers */
+.comic-description summary::-webkit-details-marker {
+  display: none;
+}
+.comic-description summary::marker {
+  content: "";               /* Removes Firefox marker */
+}
+
+/* Custom arrow */
+.comic-description summary::before {
+  content: "▶";
+  display: inline-block;
+  margin-right: 6px;
+  color: #FF5DB2;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+/* Rotate + recolor when open */
+.comic-description[open] summary::before {
+  transform: rotate(90deg);
+  color: #FFDB99;
+}
+
+/* =========================================================
+   COMIC DESCRIPTION — BORDERED BOX
+   ========================================================= */
+
+.comic-description {
+  max-width: 750px;
+  margin: 1.5rem auto 2.5rem auto;
+  padding: 1rem 1.25rem;
+
+  /* Match your card aesthetic */
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  backdrop-filter: blur(4px);
+
+  color: #e6e6e6;
+  line-height: 1.6;
+}
+
+/* Summary (toggle header) */
+.comic-description summary {
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #FFDB99; /* gold */
+  text-align: center;
+  padding: 0.5rem 0;
+  list-style: none; /* removes Firefox marker */
+}
+
+/* Remove default markers */
+.comic-description summary::-webkit-details-marker {
+  display: none;
+}
+.comic-description summary::marker {
+  content: "";
+}
+
+/* Custom arrow */
+.comic-description summary::before {
+  content: "▶";
+  display: inline-block;
+  margin-right: 6px;
+  color: #FF5DB2; /* pink accent */
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+/* Arrow rotates + recolors when open */
+.comic-description[open] summary::before {
+  transform: rotate(90deg);
+  color: #FFDB99; /* gold when expanded */
+}
+
+/* Description text */
+.comic-description p {
+  margin-top: 0.75rem;
+  color: #dcdcdc;
+  font-size: 1rem;
+  line-height: 1.6;
+  text-align: left;
+}
+
+/* Hover + focus states */
+.comic-description summary:hover,
+.comic-description summary:focus {
+  color: #FF5DB2;
+}
+
+
+/* =========================================================
    404 Page
    ========================================================= */
 
