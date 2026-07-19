@@ -1,56 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Archive – Bad Lasagna</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bad Lasagna Comic</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&family=Coiny&display=swap" rel="stylesheet">
+ <!-- Use absolute paths  -->
   <link rel="stylesheet" href="/main.css">
+  <link rel="icon" type="image/png" href="/img/favicon.png">
 </head>
+
 <body>
   <div class="page-wrapper">
+
+    <!-- Header -->
     <header class="hero">
-      <h1>Archive</h1>
+          <div class="logo-group">
+        <a href="/">
+          <img src="/img/logo-no-background.png" alt="Bad Lasagna Logo" class="logo-img" />
+        </a>
+        <h1 class="site-title">BAD LASAGNA Comic</h1>
+      </div>
+
+      <h2>Archive</h2>
       <p>Browse the comic episodes.</p>
     </header>
 
-<main class="archive-page">
-  <h1>Comic Archive</h1>
+    <!-- Archive Content -->
+    <main class="archive-page">
+      <h1>Comic Archive</h1>
 
-  <div class="archive-list">
+      <div class="archive-list">
 
-    <!-- Comic 001 -->
-    <a href="/comics/001/" class="archive-item archive-link">
-      <div class="archive-item-inner">
-        <img src="/comics/001/thumbs-001.jpg" alt="Comic 001 thumbnail" class="archive-thumb">
-        <div class="archive-meta">
-          <span class="archive-num">Comic 001</span>
-          <span class="archive-title">Harriett Has a Sweet Tooth</span>
-        </div>
-      </div>
-    </a>
+        <!-- Comic 001 -->
+        <a href="/comics/001/" class="archive-item archive-link">
+          <div class="archive-item-inner">
+            <img src="/comics/001/thumbs-001.jpg" alt="Comic 001 thumbnail" class="archive-thumb">
+            <div class="archive-meta">
+              <span class="archive-num">Comic 001</span>
+              <span class="archive-title">Harriett Has a Sweet Tooth</span>
+            </div>
+          </div>
+        </a>
 
-    <!-- Comic 002 -->
-    <a href="/comics/002" class="archive-item archive-link">
-      <div class="archive-item-inner">
-        <img src="/archive/default.svg" alt="Lasagna Cat thumbnail" class="archive-thumb">
-        <div class="archive-meta">
-          <span class="archive-num">Comic 002</span>
-          <span class="archive-title">comining soon</span>
-        </div>
-      </div>
-    </a>
+        <!-- Comic 002 -->
+        <a href="/comics/002/" class="archive-item archive-link">
+          <div class="archive-item-inner">
+            <img src="/archive/default.svg" alt="Comic 002 thumbnail" class="archive-thumb">
+            <div class="archive-meta">
+              <span class="archive-num">Comic 002</span>
+              <span class="archive-title">Coming soon</span>
+            </div>
+          </div>
+        </a>
 
-    <!-- Comic 003 -->
-    <a href="/comics/003" class="archive-item archive-link">
-      <div class="archive-item-inner">
-        <img src="/archive/default.svg" alt="Episode 1 thumbnail" class="archive-thumb">
-        <div class="archive-meta">
-          <span class="archive-num">Comic 003</span>
-          <span class="archive-title">comining soon</span>
-        </div>
-      </div>
-    </a>
+        <!-- Comic 003 -->
+        <a href="/comics/003/" class="archive-item archive-link">
+          <div class="archive-item-inner">
+            <img src="/archive/default.svg" alt="Comic 003 thumbnail" class="archive-thumb">
+            <div class="archive-meta">
+              <span class="archive-num">Comic 003</span>
+              <span class="archive-title">Coming soon</span>
+            </div>
+          </div>
+        </a>
 
+      </div> <!-- end archive-list -->
+    </main> <!-- end main -->
+
+    <!-- Footer -->
     <footer class="footer">
       <div class="newsletter">
         <h2>Let's be friends.</h2>
@@ -75,7 +95,6 @@
       <p class="footer-note">© 2025 - Today: Bad Lasagna. All rights reserved.</p>
     </footer>
 
-  </div>
-
+  </div> <!-- end page-wrapper -->
 </body>
 </html>
