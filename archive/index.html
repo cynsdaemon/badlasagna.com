@@ -2,88 +2,25 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>All Episodes – Bad Lasagna</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&family=Coiny&display=swap" rel="stylesheet">
-
- <!-- Use absolute paths  -->
+  <title>Archive – Bad Lasagna</title>
   <link rel="stylesheet" href="/main.css">
-  <link rel="icon" type="image/png" href="/img/favicon.png">
-
 </head>
-
 <body>
-<div class="page-wrapper">
+  <div class="page-wrapper">
+    <header class="hero">
+      <h1>Archive</h1>
+      <p>Browse the comic episodes.</p>
+    </header>
 
-  <header class="hero">
-    <div class="logo-group">
-      <img src="/img/logo-no-background.png" alt="Bad Lasagna Logo" class="logo-img">
-      <h1 class="site-title">BAD LASAGNA Archive</h1>
-    </div>
-  </header>
-
-  <main>
-    <h2>All Episodes</h2>
-    <div id="archive-list" class="archive-list"></div>
-  </main>
-
-</div>
-
-<script>
-fetch("archive.json")
-  .then(res => res.json())
-  .then(pages => {
-    const container = document.getElementById("archive-list");
-
-    pages.forEach(p => {
-      const item = document.createElement("div");
-      item.className = "archive-item";
-        const thumbSrc = p.thumb ? p.thumb : "thumbs/default.svg";
-
-        item.innerHTML = `
-          <a href="page.html?p=${p.num}" class="archive-link">
-            <div class="archive-item-inner">
-              <img src="${thumbSrc}" alt="Thumbnail for episode ${p.num}" class="archive-thumb">
-              <div class="archive-meta">
-                <span class="archive-num">#${p.num}</span>
-                <span class="archive-title">${p.title}</span>
-              </div>
-            </div>
-          </a>
-        `;
-      container.appendChild(item);
-    });
-  });
-</script>
-    <!-- Footer -->
-    <footer class="footer">  
-        <h2>Let's be friends.</h2>
-        <p>Follow Bad Lasagna Comic on the social media 
-          for new comic pages, behind-the-scenes notes, and announcements.
-        </p>
-        <div class="social-icons">
-          <a href="https://ko-fi.com/badlasagna">
-            <img src="/img/kofi_symbol.png" alt="ko-fi logo" class="ko-fi-logo social-icon">
-          </a>
-         <a href="https://instagram.com/cynscreativedesk">
-            <img src="/img/instagram.png" alt="Instagram icons courtesy of Flaticon" class="instagram-icon social-icon">
-          </a>
-          <a href="mailto:hello@badlasagna.com">
-            <img src="/img/mail.png" alt="Mail icons courtesy of Flaticon" class="mail-icon social-icon">
-          </a>
-        </div>
-        <nav class="nav-buttons">
-          <a href="/about.html" class="btn btn-yellow">About</a>
-          <a href="/archive/page.html?p=latest" class="btn btn-yellow">Recent Episode</a>
-          <a href="https://ko-fi.com/badlasagna" class="btn btn-pink">Support My Comic!</a>
-          <a href="/resources.html" class="btn btn-purple">Colophon</a>
-        </nav>
-      <p class="footer-note">© 2025 - Today: Bad Lasagna. All rights reserved.</p>    
-    </footer>
+    <main>
+      <h2>Comic Episodes</h2>
+      <ul>
+        <li><a href="/comics/001/">Comic 001</a></li>
+        <li><a href="/comics/002/">Comic 002</a></li>
+        <li><a href="/comics/003/">Comic 003</a></li>
+      </ul>
+    </main>
   </div>
-
 </body>
 </html>
