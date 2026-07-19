@@ -86,9 +86,8 @@ p strong {
    ========================================================= */
 a.internal-link {
   color: #FFDB99;
-  text-decoration: underline dashed;
+  text-decoration: none;
   text-decoration-color: #FFDB99;
-  text-underline-offset: 3px;
   font-weight: 600;
   transition: color 0.2s ease, text-decoration-color 0.2s ease;
 }

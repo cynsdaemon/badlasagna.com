@@ -50,7 +50,7 @@ async function loadPost() {
     const slug = window.location.pathname
       .split("/")
       .filter(Boolean)
-      .pop(); // last part of URL
+      .pop();
 
     const metaRes = await fetch("/blog/blog.json");
     const posts = await metaRes.json();
@@ -61,7 +61,6 @@ async function loadPost() {
     }
   }
 
-  // If still no postNum, default to first post
   if (!postNum) {
     document.getElementById("blog-content").innerHTML =
       "<p>Post not found.</p>";
@@ -88,12 +87,46 @@ async function loadPost() {
   const html = converter.makeHtml(mdText);
 
   // Render final blog post
-  document.getElementById("blog-content").innerHTML = `
+  const container = document.getElementById("blog-content");
+  container.innerHTML = `
     <h1>${postMeta.title}</h1>
     <p class="archive-date">${postMeta.date}</p>
     ${html}
   `;
+
+  /* ---------------------------------------------------------
+   LINK CLASSIFIER (with Ko-fi exception)
+   --------------------------------------------------------- */
+const links = container.querySelectorAll("a");
+
+links.forEach(link => {
+  const href = link.getAttribute("href");
+  if (!href) return;
+
+  // Explicit Ko-fi exception
+  const isKoFi = href.startsWith("https://ko-fi.com/");
+
+  // Internal link rules
+  const isInternal =
+    !isKoFi && (
+      href.startsWith("/") ||
+      href.startsWith("#") ||
+      href.includes("heycynwrites") ||
+      href.includes("badlasagna")
+    );
+
+  if (isInternal) {
+    link.classList.add("internal-link");
+  } else {
+    link.classList.add("external-link");
+    link.setAttribute("target", "_blank");
+    link.setAttribute("rel", "noopener noreferrer");
+  }
+});
+
 }
+
+
 
 loadPost();
 </script>
