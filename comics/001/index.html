@@ -27,10 +27,20 @@
     <main class="comic-viewer">
       <h2>Comic 001</h2>
       <img src="/comics/001/001.jpg" alt="Comic 001 placeholder" class="comic-img" />
-      <h2>Harriett Has a Sweet Tooth</h2>
-      <p class="comic-intro">After a busy week, Harriet finally has time to unwind with her favorite snack.
-
-</p>
+      <details id="comic-description" class="comic-description" style="display: block;">
+        <summary>Comic Description</summary>
+        <div class="comic-description-content">    
+            <p id="comic-description-text">
+                After a busy week, Harriet finally has time to unwind. 
+                She decides to host a movie night with her friend, the Gingerbread Man. 
+                She teases that he's in for a sweet treat. Later, Harriett is seen enjoying her favorite kind of snack. 
+                A Gingerbread cookie. Her friend sits slumped over on the couch. Some snacks you can't get enough of
+            </p>
+      </details>
+      </div>
+      
+      <h2 class="comic-title">Harriett Has a Sweet Tooth</h2>
+      <p class="comic-intro">After a busy week, Harriet finally has time to unwind with her favorite snack.</p>
       <nav class="nav-buttons">
         <a href="/archive/" class="btn btn-yellow">Previous</a>
         <a href="/comics/002/" class="btn btn-purple">Next</a>
