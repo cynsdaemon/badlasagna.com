@@ -4,12 +4,11 @@ This is the repo for **Bad Lasagna**, cozy‑weird comic about cosmic bureaucrac
 
 The repo is a lightweight, static webcomic site built with HTML, CSS, and vanilla JavaScript, hosted on GitHub Pages. The site is intentionally minimal, fast, and easy to maintain — no frameworks, no build tools, no databases.
 
-All comic episodes, navigation, and archive pages are powered by a single JSON file, making updates simple and scalable.
 
 ## Tech Used
 
 ### Frontend
-HTML5 — static pages for the site structure
+HTML — static pages for the site structure
 
 CSS3 — custom theme, responsive layout, character cards, buttons
 
@@ -23,7 +22,14 @@ GitHub Pages — free static hosting
 No server, no backend, no build pipeline
 
 ### Data
-archive.json — the single source of truth for all comic episodes
+
+#### Markdown Posts 
+
+Blog posts live in: 
+/blog/posts/<num>.md
+
+Comics live in: 
+/comics/<slug>/index.html
 
 Stores:
 
