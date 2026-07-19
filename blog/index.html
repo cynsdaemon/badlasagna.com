@@ -14,38 +14,55 @@
 <body>
 <div class="page-wrapper">
   <header class="hero">
-    <div class="logo-group">
-      <img src="/img/logo-no-background.png" alt="Bad Lasagna Logo" class="logo-img">
-      <h1 class="site-title">BAD LASAGNA Blog</h1>
-    </div>
+      <div class="logo-group">
+        <a href="/">
+          <img src="/img/logo-no-background.png" alt="Bad Lasagna Logo" class="logo-img" />
+        </a>
+        <h1 class="site-title">BAD LASAGNA Comic</h1>
+      </div>
   </header>
   <main>
     <h2>All Blog Posts</h2>
     <div id="blog-list" class="archive-list"></div>
   </main>
 </div>
-  <script>
-  fetch("blog.json")
-    .then(res => res.json())
-    .then(posts => {
-      const container = document.getElementById("blog-list");
-      posts.forEach(p => {
-        const item = document.createElement("div");
-        item.className = "archive-item";
+<script>
+async function loadBlog() {
+  const response = await fetch("/blog/blog.json");
+  const posts = await response.json();
 
-        item.innerHTML = `
-          <a href="post.html?p=${p.num}" class="archive-link">
-            <div class="archive-episode">
-              <span class="archive-num">#${p.num}</span>
-              <span class="archive-title">${p.title}</span>
-              <span class="archive-date">${p.date}</span>
-            </div>
-          </a>
-        `;
-        container.appendChild(item);
-      });
-    });
-  </script>
+  const container = document.getElementById("blog-list");
+
+  posts.forEach(post => {
+    // Pretty URL if slug exists
+    const url = post.slug
+      ? `/blog/${post.slug}/`
+      : `/blog/post.html?p=${post.num}`;
+
+    // Thumbnail fallback
+    const thumb = post.thumb || "/blog/posts/default.svg";
+
+    const item = document.createElement("a");
+    item.href = url;
+    item.className = "archive-item archive-link";
+
+    item.innerHTML = `
+      <div class="archive-item-inner">
+        <img src="${thumb}" class="archive-thumb" alt="${post.title} thumbnail">
+        <div class="archive-meta">
+          <span class="archive-title">${post.title}</span>
+          <span class="archive-date">${post.date}</span>
+        </div>
+      </div>
+    `;
+
+    container.appendChild(item);
+  });
+}
+
+loadBlog();
+</script>
+
   <!-- Footer -->
   <footer class="footer">
     <div class="newsletter">
@@ -61,8 +78,8 @@
       <a href="mailto:hello@badlasagna.com"><img src="/img/mail.png" alt="Mail icons courtesy of Flaticon" class="mail-icon social-icon"</a>
     </div>
     <nav class="nav-buttons">
-      <a href="/about.html" class="btn btn-yellow">About</a>
-      <a href="/archive/index.html" class="btn btn-yellow">Go to Comic</a>
+      <a href="/about" class="btn btn-yellow">About</a>
+      <a href="/archive" class="btn btn-yellow">Go to Comic</a>
       <a href="https://ko-fi.com/badlasagna" class="btn btn-pink">Support My Comic!</a>
     </nav>
     <p class="footer-note">© 2025 - Today: Bad Lasagna. All rights reserved.</p>    

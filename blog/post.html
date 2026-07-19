@@ -22,10 +22,12 @@
 <div class="page-wrapper">
 
   <header class="hero">
-    <div class="logo-group">
-      <img src="/img/logo-no-background.png" alt="Bad Lasagna Logo" class="logo-img">
-      <h1 class="site-title">BAD LASAGNA Blog</h1>
-    </div>
+      <div class="logo-group">
+        <a href="/">
+          <img src="/img/logo-no-background.png" alt="Bad Lasagna Logo" class="logo-img" />
+        </a>
+        <h1 class="site-title">BAD LASAGNA Comic</h1>
+      </div>
   </header>
 
   <main>
@@ -33,36 +35,69 @@
   </main>
 
   <nav class="nav-buttons">
-    <a href="/blog/index.html" class="btn btn-purple">Back to Blog</a>
-    <a href="/archive/page.html?p=latest" class="btn btn-yellow">Latest Comic</a>
+    <a href="/blog" class="btn btn-purple">Back to Blog</a>
   </nav>
 
 </div>
 
 <script>
-const params = new URLSearchParams(window.location.search);
-let postNum = params.get("p");
+async function loadPost() {
+  const params = new URLSearchParams(window.location.search);
+  let postNum = params.get("p");
 
-if (!postNum) postNum = "001";
+  // If no ?p=001, try slug from URL
+  if (!postNum) {
+    const slug = window.location.pathname
+      .split("/")
+      .filter(Boolean)
+      .pop(); // last part of URL
 
-fetch("blog.json")
-  .then(res => res.json())
-  .then(posts => {
-    const post = posts.find(p => p.num === postNum);
-    if (!post) {
-      document.getElementById("blog-content").innerHTML = "<p>Post not found.</p>";
-      return;
+    const metaRes = await fetch("/blog/blog.json");
+    const posts = await metaRes.json();
+
+    const match = posts.find(p => p.slug === slug);
+    if (match) {
+      postNum = match.num;
     }
+  }
 
-    fetch(`posts/${postNum}.md`)
-      .then(res => res.text())
-      .then(md => {
-        const converter = new showdown.Converter();
-        const html = converter.makeHtml(md);
-        document.getElementById("blog-content").innerHTML = html;
-      });
-  });
+  // If still no postNum, default to first post
+  if (!postNum) {
+    document.getElementById("blog-content").innerHTML =
+      "<p>Post not found.</p>";
+    return;
+  }
+
+  // Load metadata
+  const metaRes = await fetch("/blog/blog.json");
+  const posts = await metaRes.json();
+  const postMeta = posts.find(p => p.num === postNum);
+
+  if (!postMeta) {
+    document.getElementById("blog-content").innerHTML =
+      "<p>Post not found.</p>";
+    return;
+  }
+
+  // Load markdown file
+  const mdRes = await fetch(`/blog/posts/${postNum}.md`);
+  const mdText = await mdRes.text();
+
+  // Convert markdown → HTML
+  const converter = new showdown.Converter();
+  const html = converter.makeHtml(mdText);
+
+  // Render final blog post
+  document.getElementById("blog-content").innerHTML = `
+    <h1>${postMeta.title}</h1>
+    <p class="archive-date">${postMeta.date}</p>
+    ${html}
+  `;
+}
+
+loadPost();
 </script>
+
 
         <!-- Footer -->
     <footer class="footer">
@@ -80,7 +115,7 @@ fetch("blog.json")
 
       </div>
         <nav class="nav-buttons">
-          <a href="/about.html" class="btn btn-yellow">About</a>
+          <a href="/about" class="btn btn-yellow">About</a>
           <a href="https://ko-fi.com/badlasagna" class="btn btn-pink">Support My Comic!</a>
 
         </nav>
