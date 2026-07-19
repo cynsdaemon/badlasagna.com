@@ -1,0 +1,10 @@
+<svg width="300" height="300" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+  <rect width="300" height="300" rx="24" fill="#1F0F53" />
+  <text x="50%" y="55%" text-anchor="middle"
+        fill="#FFE55C"
+        font-family="Coiny, system-ui, sans-serif"
+        font-size="140"
+        font-weight="700">
+    BL
+  </text>
+</svg>
