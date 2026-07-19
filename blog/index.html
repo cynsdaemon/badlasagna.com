@@ -26,28 +26,43 @@
     <div id="blog-list" class="archive-list"></div>
   </main>
 </div>
-  <script>
-  fetch("blog.json")
-    .then(res => res.json())
-    .then(posts => {
-      const container = document.getElementById("blog-list");
-      posts.forEach(p => {
-        const item = document.createElement("div");
-        item.className = "archive-item";
+<script>
+async function loadBlog() {
+  const response = await fetch("/blog/blog.json");
+  const posts = await response.json();
 
-        item.innerHTML = `
-          <a href="post.html?p=${p.num}" class="archive-link">
-            <div class="archive-episode">
-              <span class="archive-num">#${p.num}</span>
-              <span class="archive-title">${p.title}</span>
-              <span class="archive-date">${p.date}</span>
-            </div>
-          </a>
-        `;
-        container.appendChild(item);
-      });
-    });
-  </script>
+  const container = document.getElementById("blog-list");
+
+  posts.forEach(post => {
+    // Pretty URL if slug exists
+    const url = post.slug
+      ? `/blog/${post.slug}/`
+      : `/blog/post.html?p=${post.num}`;
+
+    // Thumbnail fallback
+    const thumb = post.thumb || "/blog/posts/default.svg";
+
+    const item = document.createElement("a");
+    item.href = url;
+    item.className = "archive-item archive-link";
+
+    item.innerHTML = `
+      <div class="archive-item-inner">
+        <img src="${thumb}" class="archive-thumb" alt="${post.title} thumbnail">
+        <div class="archive-meta">
+          <span class="archive-title">${post.title}</span>
+          <span class="archive-date">${post.date}</span>
+        </div>
+      </div>
+    `;
+
+    container.appendChild(item);
+  });
+}
+
+loadBlog();
+</script>
+
   <!-- Footer -->
   <footer class="footer">
     <div class="newsletter">
