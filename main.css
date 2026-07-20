@@ -413,15 +413,92 @@ a[href^="http"]
   margin: 1.5rem 0;
 }
 
+
+/* =========================================================
+   BLOG POST IMAGES — COMIC-INSPIRED AESTHETIC
+   ========================================================= */
+
+.blog-content img {
+  display: block;
+  margin: 2rem auto;
+  max-width: 100%;
+  border-radius: 10px;
+
+  /* Soft comic-style frame */
+  background: #111;
+  padding: 0.75rem;
+
+  /* Glow + border similar to comic viewer */
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 4px 12px rgba(255, 229, 92, 0.15);
+
+  transition: transform 0.2s ease, box-shadow 0.25s ease;
+}
+
+/* Hover lift (same vibe as buttons + thumbnails) */
+.blog-content img:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(255, 229, 92, 0.25);
+}
+
+
+/* =========================================================
+   BLOG POST IMAGES — COMIC-INSPIRED AESTHETIC
+   ========================================================= */
+
+.blog-content img {
+  display: block;
+  margin: 2rem auto;
+  max-width: 100%;
+  border-radius: 10px;
+
+  /* Soft comic-style frame */
+  background: #111;
+  padding: 0.75rem;
+
+  /* Glow + border similar to comic viewer */
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 4px 12px rgba(255, 229, 92, 0.15);
+
+  transition: transform 0.2s ease, box-shadow 0.25s ease;
+}
+
+/* Hover lift (same vibe as buttons + thumbnails) */
+.blog-content img:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(255, 229, 92, 0.25);
+}
+
+.blog-featured {
+  max-width: 900px;
+  margin: 2.5rem auto;
+  border-radius: 12px;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid rgba(255, 219, 153, 0.25);
+  box-shadow: 0 6px 20px rgba(255, 219, 153, 0.25);
+}
+
+.blog-caption {
+  text-align: center;
+  font-size: 0.95rem;
+  color: #dcdcdc;
+  margin-top: -1rem;
+  margin-bottom: 2rem;
+  font-style: italic;
+}
+
+
+
+/* =========================================================
+   ARCHIVE THUMBNAILS
+   ========================================================= */
+
 .archive-date {
   color: #aaa;
   font-size: 0.9rem;
   margin-left: auto;
 }
-
-/* =========================================================
-   ARCHIVE THUMBNAILS
-   ========================================================= */
 
 .archive-item-inner {
   display: flex;
