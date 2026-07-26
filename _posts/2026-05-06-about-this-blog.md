@@ -1,3 +1,8 @@
+---
+title: "Welcome to the blog!"
+image: ""
+---
+
 This is the first official blog post for the Bad Lasagna website.
 
 I’ll use this space to share behind-the-scenes notes, character sketches, share [art tools I use](https://badlasagna.com/resources), and thoughts about learning to draw while making a weekly webcomic and staying sane.

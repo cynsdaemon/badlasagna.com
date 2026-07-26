@@ -1,16 +1,22 @@
+---
+title: "Comic Blog 002: Harriett Chaos"
+image: /assets/images/blog/post1-header.png
+---
+
+
 The comic epsiode titled Harriett Has a Sweet Tooth (Comic 001) took me a little longer than planned — mostly because I missed my own deadline while obsessing over Harriett’s design. I spent way too much time drawing her, redrawing her, and then redrawing her again. Perfection really tried to hijack the whole process, but I’m learning to prioritize getting it done over getting it flawless.
 
 A big part of the slowdown was learning Procreate on the fly. Brushes, layer effects, blend modes…It’s a lot. I kept bouncing between experimenting with tools and sketching Harriett in my notebook. She went through a few "identity crises" before landing on her current grey‑skinned palette, which I actually love. 
 
 <!-- Show your work! :) -->
 
-<img src="images\001_Harriett_Turnaround.jpg"
+<img src="assets\images\blog\001_Harriett_Turnaround.jpg"
      alt="Harriett Turnaround Sheet"
      class="blog-img">
 <p class="blog-caption">Harriett character turnaround sheet.</p>
 
 
-<img src="/comics/001/thumbs_001.jpg"
+<img src="assets\images\blog\thumbs_001.jpg"
      alt="Harriett Turnaround Sheet"
      class="blog-img">
 <p class="blog-caption">Harriett is up to mischief. Why she cute though.</p>
@@ -41,3 +47,4 @@ Starting is always the hardest part, but I’m proud of this one.
 
 
 
+s

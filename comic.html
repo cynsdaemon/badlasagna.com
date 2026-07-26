@@ -1,0 +1,10 @@
+---
+layout: default
+title: "Comic Archive"
+---
+<ul class="comic-archive">
+  {% assign pages = site.comics | sort: "order" %}
+  {% for p in pages %}
+    <li><a href="{{ p.url }}">{{ p.title }}</a></li>
+  {% endfor %}
+</ul>

@@ -1,0 +1,79 @@
+---
+layout: default
+title: "About"
+permalink: /about/
+---
+
+<div class="page-wrapper">
+  <main> 
+    <h2>About this site</h2>
+      <p> 
+        Bad Lasagna is a 4-panel, gag-a-day style weekly comic about cosmic bureaucracy, awkward situations, 
+        emotional labor, and the daemons' eternal battle to keep the scales balanced. 
+      </p>
+      <p>
+        The title is a reference to that one time I ate a frozen lasagna TV dinner that sent me on a one-way trip to bubble-gut city. 
+        Rethinking my life choices, my digestive system in shambles for several days.
+      </p>
+      <p>
+        Maybe more poetically...the title comes from the idea that life - like lasagna - is layered, messy, comforting, chaotic, and sometimes a little dangerous.
+      </p>
+      <p>
+        It's a place where edible boyfriends, cosmic auditors, period fairies, and 
+        ancient not-dogs all coexist in a universe that's strange and only slightly on fire.
+      </p>
+      <p>
+        Anywho. Hey, I'm Cyn. This project is my playground for cozy-weird storytelling and 
+        maintaining a sustainable creative practice. 
+      </p>
+      <p>Thanks for reading and being part of my experiment.</p>
+      <p>New episodes are served fresh every Wednesday.</p>  
+      <!-- Aside regarding broken links  -->
+      <div class="aside">
+        <h3>Noticed a spelling mistake or a broken link?</h3>
+        <p>Let me know! Feel free to <a href="https://github.com/cynsdaemon/badlasagna.com/issues" class="external-link">open an issue on Github</a></p>
+      </div>
+  </main> 
+  <h2>Meet the Characters</h2>
+    <div class="character-grid">
+      <div class="character-card">
+        <div class="character-thumb character-icon placeholder">H</div>
+          <h3>Harriett — The Well-Meaning, Chaotic Baker</h3>
+            <p>
+              Harriett is a cheerful baker who dates and eats confections. She also occasionally
+              turns her boyfriends into confections because “it sounded like a good idea at the time.”
+              Every incident escalates from mild inconvenience to cosmic incident report in under
+              10 minutes. She considers this a skill.
+            </p>
+        </div>
+    <div class="character-card">
+      <div class="character-thumb character-icon placeholder">K</div>
+        <h3>Kelsey — The Ancient Not-Dog</h3>
+          <p>
+            Mr. Kelsey looks like a dog, acts like a dog, but is absolutely not a dog. 
+            He’s an ancient being who silently judges Harriett’s choices while 
+            occasionally revealing powers he pretends he doesn’t have. 
+            He remains perpetually unimpressed with humans.
+          </p>
+      </div>
+      <div class="character-card">
+       <div class="character-thumb character-icon placeholder">E</div>
+        <h3>Echo Reciprius — The Cosmic Bureaucrat</h3>
+          <p>
+            Echo Reciprius (pronounced reh-SIP-ree-us) shows up whenever Harriett’s emotional
+            decisions cause cosmic paperwork. They are deeply confused by
+            human dating culture, but they’re trying their best.
+          </p>
+      </div>
+      <div class="character-card">
+        <div class="character-thumb character-icon placeholder">P</div>
+        <h3>Pam — The Period Chaos Fairy</h3>
+        <p>
+          Pink and bubbly, Pam is the supernatural embodiment of inconvenient timing, arriving uninvited 
+          the moment someone starts their period with dramatic proclamations and the wrong supplies. 
+          She treats menstruation like a cosmic weather event and believes she’s doing vital work. 
+          She’s the only one who reads the memos. Reading the room? Not so much.
+        </p>
+      </div>
+    </div>  
+</div>

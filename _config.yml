@@ -1,0 +1,16 @@
+collections:
+  comics:
+    output: true
+    permalink: /comic/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: comics
+    values:
+      layout: comic
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post

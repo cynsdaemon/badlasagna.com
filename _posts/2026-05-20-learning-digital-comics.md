@@ -1,3 +1,9 @@
+---
+title: "Comic Blog 001: Learning to Make Digital Comics"
+image: /assets/images/blog/post1-header.png
+---
+
+
 ### Publishing My First Comic Panel Took…a Minute
 
 So, it turns out, getting my first comic panel (or is it technically an episode?) out into the world took way longer than I expected.
