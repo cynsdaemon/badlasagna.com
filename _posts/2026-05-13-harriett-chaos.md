@@ -1,5 +1,5 @@
 ---
-title: "Comic 001 Update: Harriett Chaos"
+title: "Comic Blog 002: Harriett Chaos"
 image:
 thumb:
 description: "A quick hello." 

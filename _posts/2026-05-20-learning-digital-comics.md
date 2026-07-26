@@ -1,5 +1,5 @@
 ---
-title: "Learn to draw digitally"
+title: "Comic Blog 001: Learning to Make Digital Comics"
 image:
 thumb:
 description: "Publishing My First Comic Panel Took…a Minute" 
