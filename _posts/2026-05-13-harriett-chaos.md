@@ -1,6 +1,5 @@
 ---
 title: "Comic Blog 002: Harriett Chaos"
-image: /assets/images/blog/post1-header.png
 ---
 
 

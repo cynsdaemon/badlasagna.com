@@ -1,6 +1,5 @@
 ---
 title: "Welcome to the blog!"
-image: /assets\images\site\default.svg
 ---
 
 This is the first official blog post for the Bad Lasagna website.
