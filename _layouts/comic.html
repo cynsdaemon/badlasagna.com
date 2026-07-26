@@ -5,7 +5,8 @@ layout: default
 <article class="comic-page">
 
   <!-- Comic Title -->
-  <h1 class="comic-title">{{ page.title }}</h1>
+  {% assign comic_number = page.comic_order | default: 0 | prepend: "000" | slice: -3, 3 %}
+  <h1 class="comic-title">Comic {{ comic_number }}: {{ page.title }}</h1>
 
   <!-- Comic Image -->
   <div class="comic-image-wrapper">
@@ -41,31 +42,30 @@ layout: default
   <!-- Navigation -->
   <nav class="comic-nav">
     {% assign pages = site.comics | sort: "comic_order" %}
-    {% assign index = -1 %}
-    {% assign last_index = pages.size | minus: 1 %}
+    {% assign current_order = page.comic_order | default: 0 %}
+    {% assign previous_page = nil %}
+    {% assign next_page = nil %}
 
     {% for p in pages %}
-      {% if p.url == page.url %}
-        {% assign index = forloop.index0 %}
+      {% if p.comic_order < current_order %}
+        {% assign previous_page = p %}
+      {% elsif p.comic_order > current_order and next_page == nil %}
+        {% assign next_page = p %}
       {% endif %}
     {% endfor %}
 
     <div class="comic-nav">
-
-      {% if index > 0 %}
-        <a href="{{ pages[index | minus: 1].url }}">Previous</a>
+      {% if previous_page %}
+        <a href="{{ previous_page.url }}" class="btn comic-nav-btn">Previous</a>
       {% else %}
         <span class="disabled">Previous</span>
       {% endif %}
 
-      {% if index < pages.size | minus: 1 %}
-        <a href="{{ pages[index | plus: 1].url }}">Next</a>
+      {% if next_page %}
+        <a href="{{ next_page.url }}" class="btn">Next</a>
       {% else %}
         <span class="disabled">Next</span>
       {% endif %}
-
     </div>
-
-
   </nav>
 </article>

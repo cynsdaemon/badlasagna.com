@@ -249,9 +249,11 @@ a[href^="http"]
   margin-top: 2rem;
 }
 
-.comic-nav .btn {
+.comic-nav .btn,
+.comic-nav .comic-nav-btn {
   background-color: #b38bff;
   border-radius: 10px;
+  color: #fff;
   font-size: 1.1rem;
   font-weight: 600;
   padding: 0.75rem 1.5rem;
