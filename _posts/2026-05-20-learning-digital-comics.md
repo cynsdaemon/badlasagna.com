@@ -1,6 +1,6 @@
 ---
 title: "Comic Blog 001: Learning to Make Digital Comics"
-image: /assets/images/blog/post1-header.png
+image: assets\images\site\default.svg
 ---
 
 
