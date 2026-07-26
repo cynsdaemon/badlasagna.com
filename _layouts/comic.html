@@ -12,32 +12,30 @@ layout: default
     <img src="{{ page.image }}" alt="{{ page.title }}" class="comic-img">
   </div>
 
-<!-- Navigation -->
-<nav class="comic-nav">
-  {% assign pages = site.comics | sort: "order" %}
+  <!-- Navigation -->
+  <nav class="comic-nav">
+    {% assign pages = site.comics | sort: "order" %}
 
-  {% for p in pages %}
-    {% if p.url == page.url %}
-      {% assign index = forloop.index0 %}
-    {% endif %}
-  {% endfor %}
+    {% for p in pages %}
+      {% if p.url == page.url %}
+        {% assign index = forloop.index0 %}
+      {% endif %}
+    {% endfor %}
 
-  <div class="comic-nav-inner">
+    <div class="comic-nav-inner">
 
-    {% if index > 0 %}
-      <a href="{{ pages[index | minus: 1].url }}" class="comic-nav btn prev-btn">
-        ← Previous
-      </a>
-    {% endif %}
+      {% if index > 0 %}
+        <a href="{{ pages[index | minus: 1].url }}" class="btn prev-btn">
+          ← Previous
+        </a>
+      {% endif %}
 
-    {% if index < pages.size | minus: 1 %}
-      <a href="{{ pages[index | plus: 1].url }}" class="comic-nav btn next-btn">
-        Next →
-      </a>
-    {% endif %}
+      {% if index < pages.size | minus: 1 %}
+        <a href="{{ pages[index | plus: 1].url }}" class="btn next-btn">
+          Next →
+        </a>
+      {% endif %}
 
-  </div>
-</nav>
-
-
+    </div>
+  </nav>
 </article>
