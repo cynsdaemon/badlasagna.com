@@ -41,9 +41,3 @@ Starting is always the hardest part, but I’m proud of this one.
 
 - Read Comic 001: [Harriett Has a Sweet Tooth](https://badlasagna.com/comics/001/)
 - Check out the 30-second time lapse video for Comic 001 [here](https://youtu.be/3nLFzEJ_wQc)
-
-
-
-
-
-s

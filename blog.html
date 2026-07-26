@@ -4,25 +4,26 @@ title: "Blog"
 permalink: /blog/
 ---
 
-<main class="blog-content">
+<main class="page-wrapper">
 
   <h1>Blog</h1>
   <p>Updates, process notes, and cosmic bureaucracy musings.</p>
 
-  <div class="blog-list">
+  <div class="archive-list">
 
     {% assign posts = site.posts %}
     {% for post in posts %}
-      <a href="{{ post.url }}" class="blog-item">
-        <div class="blog-item-inner">
+      <a href="{{ post.url }}" class="archive-item archive-link">
+        <div class="archive-episode">
 
+          <!-- Optional thumbnail -->
           {% if post.image %}
-            <img src="{{ post.image }}" alt="{{ post.title }} thumbnail" class="blog-thumb">
+            <img src="{{ post.image }}" alt="{{ post.title }} thumbnail" class="archive-thumb">
           {% endif %}
 
-          <div class="blog-meta">
-            <span class="blog-title">{{ post.title }}</span>
-            <span class="blog-date">{{ post.date | date: "%B %-d, %Y" }}</span>
+          <div class="archive-meta">
+            <span class="archive-title">{{ post.title }}</span>
+            <span class="archive-date">{{ post.date | date: "%B %-d, %Y" }}</span>
           </div>
 
         </div>
