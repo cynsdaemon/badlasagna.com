@@ -9,13 +9,13 @@ A big part of the slowdown was learning Procreate on the fly. Brushes, layer eff
 
 <!-- Show your work! :) -->
 
-<img src="assets\images\blog\001_Harriett_Turnaround.jpg"
+<img src="/assets\images\blog\001_Harriett_Turnaround.jpg"
      alt="Harriett Turnaround Sheet"
      class="blog-img">
 <p class="blog-caption">Harriett character turnaround sheet.</p>
 
 
-<img src="assets\images\blog\thumbs_001.jpg"
+<img src="/assets\images\blog\thumbs_001.jpg"
      alt="Harriett Turnaround Sheet"
      class="blog-img">
 <p class="blog-caption">Harriett is up to mischief. Why she cute though.</p>
