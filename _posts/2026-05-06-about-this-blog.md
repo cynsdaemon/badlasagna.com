@@ -1,6 +1,8 @@
 ---
 title: "Welcome to the blog!"
-thumb: 
+image:
+thumb:
+description: "A quick hello." 
 ---
 
 This is the first official blog post for the Bad Lasagna website.

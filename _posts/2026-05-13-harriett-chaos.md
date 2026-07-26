@@ -1,7 +1,9 @@
 ---
-title: "Comic Blog 002: Harriett Chaos"
+title: "Comic 001 Update: Harriett Chaos"
+image:
+thumb:
+description: "A quick hello." 
 ---
-
 
 The comic epsiode titled Harriett Has a Sweet Tooth (Comic 001) took me a little longer than planned — mostly because I missed my own deadline while obsessing over Harriett’s design. I spent way too much time drawing her, redrawing her, and then redrawing her again. Perfection really tried to hijack the whole process, but I’m learning to prioritize getting it done over getting it flawless.
 
