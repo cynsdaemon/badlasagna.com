@@ -1,7 +1,7 @@
 collections:
   comics:
     output: true
-    permalink: /comic/:name/
+    permalink: /comic/:basename/
 
 permalink: /blog/:title/
 
