@@ -3,6 +3,8 @@ collections:
     output: true
     permalink: /comic/:name/
 
+permalink: /blog/:title/
+
 defaults:
   - scope:
       path: ""
@@ -14,3 +16,4 @@ defaults:
       type: posts
     values:
       layout: post
+
