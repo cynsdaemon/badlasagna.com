@@ -1,0 +1,40 @@
+---
+layout: default
+title: "Comic Archive"
+permalink: /archive/
+---
+
+<header class="archive-header">
+  <h2>Archive</h2>
+  <p>Browse the comic episodes.</p>
+</header>
+
+<main class="archive-page">
+  <h1>Comic Archive</h1>
+
+  <div class="archive-list">
+
+    {% assign pages = site.comics | sort: "order" %}
+    {% for p in pages %}
+      <a href="{{ p.url }}" class="archive-item archive-link">
+        <div class="archive-item-inner">
+
+          <!-- Thumbnail -->
+          {% if p.thumb %}
+            <img src="{{ p.thumb }}" alt="{{ p.title }} thumbnail" class="archive-thumb">
+          {% else %}
+            <img src="/archive/default.svg" alt="Default thumbnail" class="archive-thumb">
+          {% endif %}
+
+          <!-- Meta -->
+          <div class="archive-meta">
+            <span class="archive-num">Comic {{ p.order | prepend: "00" | slice: -3 }}</span>
+            <span class="archive-title">{{ p.title }}</span>
+          </div>
+
+        </div>
+      </a>
+    {% endfor %}
+
+  </div>
+</main>

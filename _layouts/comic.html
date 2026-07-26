@@ -1,22 +1,42 @@
+---
+layout: default
+---
+
 <article class="comic-page">
-  <h1>{{ page.title }}</h1>
-  <img src="{{ page.image }}" alt="{{ page.title }}">
+
+  <!-- Comic Title -->
+  <h1 class="comic-title">{{ page.title }}</h1>
+
+  <!-- Comic Image -->
+  <div class="comic-image-wrapper">
+    <img src="{{ page.image }}" alt="{{ page.title }}" class="comic-image">
+  </div>
+
+  <!-- Navigation -->
+  <nav class="comic-nav">
+    {% assign pages = site.comics | sort: "order" %}
+
+    {% for p in pages %}
+      {% if p.order == page.order %}
+        {% assign index = forloop.index0 %}
+      {% endif %}
+    {% endfor %}
+
+    <div class="comic-nav-inner">
+
+      {% if index > 0 %}
+        <a href="{{ pages[index | minus: 1].url }}" class="comic-nav-btn prev-btn">
+          ← Previous
+        </a>
+      {% endif %}
+
+      {% if index < pages.size | minus: 1 %}
+        <a href="{{ pages[index | plus: 1].url }}" class="comic-nav-btn next-btn">
+          Next →
+        </a>
+      {% endif %}
+
+    </div>
+  </nav>
+
 </article>
-
-
-<nav class="comic-nav">
-  {% assign pages = site.comics | sort: "order" %}
-  {% for p in pages %}
-    {% if p.order == page.order %}
-      {% assign index = forloop.index0 %}
-    {% endif %}
-  {% endfor %}
-
-  {% if index > 0 %}
-    <a href="{{ pages[index | minus: 1].url }}">← Previous</a>
-  {% endif %}
-
-  {% if index < pages.size | minus: 1 %}
-    <a href="{{ pages[index | plus: 1].url }}">Next →</a>
-  {% endif %}
-</nav>

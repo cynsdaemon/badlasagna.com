@@ -3,25 +3,24 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>{{ page.title }}</title>
+  <title>About - Bad Lasagna</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&family=Coiny&display=swap" rel="stylesheet">
  <!-- Use absolute paths  -->
   <link rel="stylesheet" href="/assets/css/main.css">
-  <link rel="icon" type="image/png" href="/assets/images/favicon.png">
+  <link rel="icon" type="image/png" href="/assets/images/site/favicon.png">
 </head>
-<body>
-  <header class="hero">
-    {% include header.html %}
-  </header>
-  <div class="page-wrapper">  
-    <main>
-        {{ content }}
-    </main>
 
-        <!-- Footer -->
-        {% include footer.html %}
-    </div> <!-- page wrapper -->
-  </body>
+    <body>
+        <header class="hero">
+            <div class="logo-group">
+                <a href="/">
+                    <img src="/assets/images/site/logo-no-background.png" alt="Bad Lasagna Logo" class="logo-img" />
+                </a>
+                <h1 class="site-title">BAD LASAGNA Comic</h1>
+            </div>
+        </header>
+    </body>
+
 </html>
