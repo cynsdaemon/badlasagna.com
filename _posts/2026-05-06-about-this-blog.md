@@ -1,5 +1,6 @@
 ---
 title: "Welcome to the blog!"
+thumb: /assets/
 ---
 
 This is the first official blog post for the Bad Lasagna website.
