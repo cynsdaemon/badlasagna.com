@@ -10,7 +10,7 @@ image: /assets/images/site/default.svg
   <p>Updates, process notes, and cosmic bureaucracy musings.</p>
 </header>
 
-<main class="blog-page blog-content">
+<main class="blog-page">
   <h2>Latest Posts</h2>
 
   <div class="blog-list">
@@ -18,7 +18,7 @@ image: /assets/images/site/default.svg
     {% assign posts = site.posts %}
     {% for post in posts %}
       <a href="{{ post.url }}" class="blog-item blog-link">
-        <div class="blog-item-inner">
+        <div class="blog-item-inner blog-content">
 
           <!-- Thumbnail (optional) -->
           {% if post.image %}
