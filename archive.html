@@ -12,7 +12,7 @@ permalink: /archive/
 <main class="archive-page">
   <div class="archive-list">
 
-    {% assign pages = site.comics | sort: "order" %}
+    {% assign pages = site.comics | sort: "comic_order" %}
     {% for p in pages %}
       <a href="{{ p.url }}" class="archive-item archive-link">
         <div class="archive-item-inner">
@@ -26,7 +26,7 @@ permalink: /archive/
 
           <!-- Meta -->
           <div class="archive-meta">
-            <span class="archive-num">Comic {{ p.order | prepend: "00" | slice: -3 }}</span>
+            <span class="archive-num">Comic {{ p.comic_order | prepend: "00" | slice: -3 }}</span>
             <span class="archive-title">{{ p.title }}</span>
           </div>
 
