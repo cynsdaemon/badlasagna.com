@@ -25,13 +25,13 @@ layout: default
     <div class="comic-nav-inner">
 
       {% if index > 0 %}
-        <a href="{{ pages[index | minus: 1].url }}" class="comic-nav comic-nav-btn prev-btn">
+        <a href="{{ pages[index | minus: 1].url }}" class="comic-nav btn prev-btn">
           ← Previous
         </a>
       {% endif %}
 
       {% if index < pages.size | minus: 1 %}
-        <a href="{{ pages[index | plus: 1].url }}" class="comic-nav comic-nav-btn next-btn">
+        <a href="{{ pages[index | plus: 1].url }}" class="comic-nav btn next-btn">
           Next →
         </a>
       {% endif %}
