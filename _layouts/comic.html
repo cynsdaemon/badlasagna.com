@@ -38,11 +38,6 @@ layout: default
     {% if page.characters %}
     <p><strong>Characters:</strong> {{ page.characters | join: ", " }}</p>
     {% endif %}
-
-    {% if page.release_date %}
-    <p><strong>Release Date:</strong> {{ page.release_date | date: "%B %-d, %Y" }}</p>
-    {% endif %}
-
   <!-- Navigation -->
   <nav class="comic-nav">
     {% assign pages = site.comics | sort: "comic_order" %}

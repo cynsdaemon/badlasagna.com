@@ -621,6 +621,38 @@ a[href^="http"]
   text-align: left;
 }
 
+/* Tag container */
+.comic-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1.25rem 0;
+}
+
+/* Individual tag badge */
+.comic-tag {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 0.35rem 0.75rem;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  color: #ffe55c;
+  letter-spacing: 0.5px;
+  text-transform: lowercase;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+}
+
+/* Hover lift + glow */
+.comic-tag:hover {
+  background: rgba(255, 255, 255, 0.12);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(255, 229, 92, 0.25);
+}
+
+
 /* =========================================================
    404 Page
    ========================================================= */
