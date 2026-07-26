@@ -50,20 +50,22 @@ layout: default
       {% endif %}
     {% endfor %}
 
-    <div class="comic-nav-inner">
+    <div class="comic-nav">
 
       {% if index > 0 %}
-        <a href="{{ pages[index | minus: 1].url }}" class="btn prev-btn">
-          ← Previous
-        </a>
+        <a href="{{ pages[index | minus: 1].url }}">Previous</a>
+      {% else %}
+        <span class="disabled">Previous</span>
       {% endif %}
 
-      {% if index >= 0 and index < last_index %}
-        <a href="{{ pages[index | plus: 1].url }}" class="btn next-btn">
-          Next →
-        </a>
+      {% if index < pages.size | minus: 1 %}
+        <a href="{{ pages[index | plus: 1].url }}">Next</a>
+      {% else %}
+        <span class="disabled">Next</span>
       {% endif %}
 
     </div>
+
+
   </nav>
 </article>

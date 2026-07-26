@@ -259,15 +259,19 @@ a[href^="http"]
   transition: transform 0.15s ease, opacity 0.2s ease;
 }
 
-.comic-nav .btn:hover {
-  transform: translateY(-3px);
+.comic-nav .disabled {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.3);
+  flex: 1 1 auto;
+  text-align: center;
+  cursor: not-allowed;
+  opacity: 0.5;
 }
 
-.comic-nav .disabled {
-  opacity: 0.4;
-  pointer-events: none;
-  transform: none;
-}
 
 /* =========================================================
    CHARACTER GRID + CARDS
