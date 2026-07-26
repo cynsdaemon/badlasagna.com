@@ -17,9 +17,9 @@ layout: default
     <p>
       <!-- Your description text goes here -->
       {% if page.description %}
-        <details class="comic-description">
-          <summary>About this comic</summary>
-          <p>{{ page.description }}</p>
+        <details class="comic-description" style="display: block;">
+          <summary>Comic Description</summary>
+          <p id="comic-descripition-text">{{ page.description }}</p>
         </details>
       {% endif %}
     </p>
@@ -34,7 +34,6 @@ layout: default
   </div>
   {% endif %}
 
-
   <!-- Comic Metadata -->
     {% if page.characters %}
     <p><strong>Characters:</strong> {{ page.characters | join: ", " }}</p>
@@ -43,7 +42,6 @@ layout: default
     {% if page.release_date %}
     <p><strong>Release Date:</strong> {{ page.release_date | date: "%B %-d, %Y" }}</p>
     {% endif %}
-
 
   <!-- Navigation -->
   <nav class="comic-nav">
