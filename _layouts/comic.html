@@ -14,7 +14,7 @@ layout: default
 
   <!-- Navigation -->
   <nav class="comic-nav">
-    {% assign pages = site.comics | sort: "order" %}
+    {% assign pages = site.comics | sort: "comic_order" %}
 
     {% for p in pages %}
       {% if p.url == page.url %}
