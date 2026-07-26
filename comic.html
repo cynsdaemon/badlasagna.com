@@ -3,7 +3,7 @@ layout: default
 title: "Comic Archive"
 ---
 <ul class="comic-archive">
-  {% assign pages = site.comics | sort: "order" %}
+  {% assign pages = site.comics | sort: "comic_order" %}
   {% for p in pages %}
     <li><a href="{{ p.url }}">{{ p.title }}</a></li>
   {% endfor %}
