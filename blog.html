@@ -6,16 +6,23 @@ permalink: /blog/
 
 <main class="page-wrapper">
 
-  <h1>Blog</h1>
-
+<h1>Blog</h1>
   <div class="archive-list">
 
     {% for post in site.posts %}
       <a href="{{ post.url }}" class="archive-item archive-link">
         <div class="archive-episode">
 
-          {% if post.image %}
-            <img src="{{ post.image }}" class="archive-thumb">
+          {% if post.thumb %}
+            <img src="{{ post.thumb }}" alt="{{ post.title }} thumbnail" class="archive-thumb">
+
+          {% elsif post.image %}
+            <img src="{{ post.image }}" alt="{{ post.title }} thumbnail" class="archive-thumb">
+
+          {% else %}
+            <div class="bl-monogram">
+              {{ post.title | slice: 0, 1 }}
+            </div>
           {% endif %}
 
           <div class="archive-meta">
