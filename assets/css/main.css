@@ -120,15 +120,6 @@ a.internal-link:focus {
   border-color: rgba(198, 179, 255, 0.6);
 }
 
-/* Arrow denotes an external link */
-.external-link::after {
-  content: "↗";
-  font-size: 0.8em;
-  margin-left: 4px;
-  opacity: 0.7;
-  transition: opacity 0.2s ease, color 0.2s ease;
-  color: #FFDB99; /* match default gold */
-}
 
 .external-link:hover::after {
   opacity: 1;
@@ -629,8 +620,8 @@ a[href^="http"]
 
 /* Tag container */
 .comic-tags {
-  display: flex;
   flex-wrap: wrap;
+  text-align: center;
   gap: 0.5rem;
   margin: 1.25rem 0;
 }
@@ -694,7 +685,6 @@ button:focus,
 
 .comic-nav {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   gap: 0.75rem;
   margin: 2rem 0;

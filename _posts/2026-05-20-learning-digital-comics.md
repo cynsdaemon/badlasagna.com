@@ -1,5 +1,5 @@
 ---
-title: "Comic Blog 001: Learning to Make Digital Comics"
+title: "Comic Blog: Learning to Make Digital Comics"
 image:
 thumb:
 description: "Publishing My First Comic Panel Took…a Minute" 
@@ -23,6 +23,6 @@ But the best part? I finally published the panel. Starting really is the hardest
 
 Next up: 
 
-- Read Comic 001: [Harriett Has a Sweet Tooth](https://badlasagna.com/comics/001/)
+- Read Comic 001: [Harriett Has a Sweet Tooth](https://badlasagna.com/comic/harriett-sweet-tooth/)
 - Check out [Walter Ostlie's YouTube Channel](https://www.youtube.com/@walterostlie) 
 
