@@ -17,6 +17,6 @@ defaults:
     values:
       layout: post
 
-paginate: 1
+paginate: 10
 paginate_path: "/page:num/"
 

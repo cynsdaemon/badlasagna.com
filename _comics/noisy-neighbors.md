@@ -4,4 +4,6 @@ comic_order: 2
 image: /assets\images\site\coming-soon.png
 thumb: /assets\images\site\coming-soon.png
 description: New episodes post every Wednesday. Stay tuned!
+tags: [neighbors, zombies]
+categories: [introverts, featured]
 ---
