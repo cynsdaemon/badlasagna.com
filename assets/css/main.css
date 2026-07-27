@@ -524,11 +524,15 @@ a[href^="http"]
   height: auto;
   border-radius: 8px;
   border: 1px solid rgba(255, 255, 255, 0.1);
+  flex-shrink: 0;
+  object-fit: cover;
+  transition: transform 0.15s ease, box-shadow 0.2s ease;
 }
 
 .archive-meta {
   display: flex;
   flex-direction: column;
+  min-width: 0;
 }
 
 .archive-title {
@@ -556,19 +560,31 @@ a[href^="http"]
   color: #ffe55c;
   border: 2px solid rgba(255, 255, 255, 0.15);
 }
-/* Soft hover effect for thumbnails */
-.archive-thumb {
-  transition: transform 0.15s ease, box-shadow 0.2s ease;
-}
 
 .archive-thumb:hover {
   transform: translateY(-3px);
-  box-shadow: 0 4px 12px rgba(255, 229, 92, 0.25); /* soft yellow glow */
+  box-shadow: 0 4px 12px rgba(255, 229, 92, 0.25);
 }
 
-/* Slightly softer look for the fallback BL monogram */
 .archive-thumb[src*="default.svg"] {
   opacity: 0.9;
+}
+
+@media (max-width: 600px) {
+  .archive-item-inner {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .archive-thumb {
+    width: 100%;
+    max-width: 220px;
+    height: auto;
+  }
+
+  .archive-meta {
+    width: 100%;
+  }
 }
 
 /* =========================================================
