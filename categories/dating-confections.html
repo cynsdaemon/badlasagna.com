@@ -1,0 +1,42 @@
+---
+layout: default
+title: "Comics in category: dating confections"
+permalink: /categories/dating-confections/
+---
+
+<head>
+  <link rel="icon" type="image/png" href="/assets/images/site/favicon.png">
+</head>
+
+<header class="archive-header">
+  <h1>Dating Confections</h1>
+  <p>Comics in this category.</p>
+</header>
+
+<main class="archive-page">
+  <div class="archive-list">
+
+    {% assign category_name = 'dating confections' %}
+    {% assign pages = site.comics | where_exp: "comic", "comic.categories contains category_name" | sort: "comic_order" %}
+    {% for p in pages %}
+      <a href="{{ p.url }}" class="archive-item archive-link">
+        <div class="archive-item-inner">
+
+          {% if p.thumb %}
+            <img src="{{ p.thumb }}" alt="{{ p.title }} thumbnail" class="archive-thumb">
+          {% else %}
+            <img src="/archive/default.svg" alt="Default thumbnail" class="archive-thumb">
+          {% endif %}
+
+          <div class="archive-meta">
+            {% assign comic_number = p.comic_order | default: 0 | prepend: "000" | slice: -3, 3 %}
+            <span class="archive-num">Comic {{ comic_number }}</span>
+            <span class="archive-title">{{ p.title }}</span>
+          </div>
+
+        </div>
+      </a>
+    {% endfor %}
+
+  </div>
+</main>

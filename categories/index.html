@@ -1,0 +1,39 @@
+---
+layout: default
+title: "Comic Categories"
+permalink: /categories/
+---
+
+<head>
+  <link rel="icon" type="image/png" href="/assets/images/site/favicon.png">
+</head>
+
+<header class="archive-header">
+  <h1>Comic Categories</h1>
+  <p>Browse comics by category.</p>
+</header>
+
+<main class="archive-page">
+  <div class="archive-list">
+
+    {% assign all_categories = '' | split: ',' %}
+    {% for comic in site.comics %}
+      {% for category in comic.categories %}
+        {% unless all_categories contains category %}
+          {% assign all_categories = all_categories | push: category %}
+        {% endunless %}
+      {% endfor %}
+    {% endfor %}
+
+    {% for category in all_categories %}
+      <a href="/categories/{{ category | slugify }}/" class="archive-item archive-link">
+        <div class="archive-item-inner">
+          <div class="archive-meta">
+            <span class="archive-title">{{ category }}</span>
+          </div>
+        </div>
+      </a>
+    {% endfor %}
+
+  </div>
+</main>

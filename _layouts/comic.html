@@ -35,6 +35,15 @@ layout: default
   </div>
   {% endif %}
 
+  <!-- Add category badges -->
+  {% if page.categories %}
+    <div class="comic-category-badges">
+      {% for category in page.categories %}
+        <a href="/categories/{{ category | slugify }}" class="comic-category-badge">{{ category }}</a>
+      {% endfor %}
+    </div>
+  {% endif %}
+
   <!-- Comic Metadata -->
     {% if page.characters %}
     <p><strong>Characters:</strong> {{ page.characters | join: ", " }}</p>
