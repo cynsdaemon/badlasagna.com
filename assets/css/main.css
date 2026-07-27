@@ -587,54 +587,6 @@ a[href^="http"]
   }
 }
 
-
-/* Pagination container */
-.pagination {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.5rem;
-  margin: 2rem 0;
-  flex-wrap: wrap;
-}
-
-/* Pagination links */
-.pagination a,
-.pagination span {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0.6rem 1rem;
-  font-size: 1rem;
-  border-radius: 8px;
-  text-decoration: none;
-  background: #f7f7f7;
-  color: #333;
-  border: 1px solid #ddd;
-  transition: all 0.2s ease;
-}
-
-/* Hover */
-.pagination a:hover {
-  background: #eaeaea;
-  border-color: #ccc;
-}
-
-/* Active page */
-.pagination .current,
-.pagination .active {
-  background: #111827;
-  color: #fff;
-  border-color: #111827;
-  font-weight: 600;
-}
-
-/* Disabled (Prev/Next when unavailable) */
-.pagination .disabled {
-  opacity: 0.4;
-  pointer-events: none;
-}
-
 /* =========================================================
    COMIC DESCRIPTION (COLLAPSIBLE)
    ========================================================= */
