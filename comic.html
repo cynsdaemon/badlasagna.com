@@ -2,6 +2,10 @@
 layout: default
 title: "Comic Archive"
 ---
+
+<head>
+  <link rel="icon" type="image/png" href="/assets/images/site/favicon.png">
+</head>
 <ul class="comic-archive">
   {% assign pages = site.comics | sort: "comic_order" %}
   {% for p in pages %}
