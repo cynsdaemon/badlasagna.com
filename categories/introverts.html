@@ -2,6 +2,7 @@
 layout: default
 title: "Comics in category: introverts"
 permalink: /categories/introverts/
+description: "Stories about quiet chaos, social energy, and surviving the day."
 ---
 
 <head>
@@ -10,8 +11,12 @@ permalink: /categories/introverts/
 
 <header class="archive-header">
   <h1>Introverts</h1>
-  <p>Comics in this category.</p>
+  <p>ALL Comics in 'Introverts' category.</p>
 </header>
+
+{% if page.description %}
+  <p class="archive-description">{{ page.description }}</p>
+{% endif %}
 
 <main class="archive-page">
   <div class="archive-list">

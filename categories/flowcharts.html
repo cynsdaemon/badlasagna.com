@@ -2,6 +2,7 @@
 layout: default
 title: "Comics in category: Flowcharts"
 permalink: /categories/flowcharts/
+description: "Visual chaos explained with arrows, boxes, and questionable decision-making."
 ---
 
 <head>
@@ -12,6 +13,10 @@ permalink: /categories/flowcharts/
   <h1>Flowcharts</h1>
   <p>Comics in this category.</p>
 </header>
+
+{% if page.description %}
+  <p class="archive-description">{{ page.description }}</p>
+{% endif %}
 
 <main class="archive-page">
   <div class="archive-list">

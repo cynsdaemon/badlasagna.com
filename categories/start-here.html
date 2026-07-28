@@ -1,8 +1,8 @@
 ---
 layout: default
-title: "Comics in category: Snackcident Reports"
-permalink: /categories/snackcident-reports/
-description: "Reports on the chaotic events that happen when late night...snacks go wrong."
+title: "Comics in category: Start Here"
+permalink: /categories/start-here/
+description: "A good place to begin if you are new to the Bad Lasagna universe."
 ---
 
 <head>
@@ -10,8 +10,8 @@ description: "Reports on the chaotic events that happen when late night...snacks
 </head>
 
 <header class="archive-header">
-  <h1>Snackcident Reports</h1>
-  <p>ALL Comics in 'Snackcident Reports' category.</p>
+  <h1>Start Here</h1>
+  <p>ALL Comics in 'Start Here' category.</p>
 </header>
 
 {% if page.description %}
@@ -21,7 +21,7 @@ description: "Reports on the chaotic events that happen when late night...snacks
 <main class="archive-page">
   <div class="archive-list">
 
-    {% assign category_name = 'Snackcident Reports' %}
+    {% assign category_name = 'Start Here' %}
     {% assign pages = site.comics | where_exp: "comic", "comic.categories contains category_name" | sort: "comic_order" %}
     {% for p in pages %}
       <a href="{{ p.url }}" class="archive-item archive-link">

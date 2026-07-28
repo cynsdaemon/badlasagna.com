@@ -2,6 +2,7 @@
 layout: default
 title: "Comics in category: featured"
 permalink: /categories/featured/
+description: "A spotlight on comics worth revisiting."
 ---
 
 <head>
@@ -10,8 +11,12 @@ permalink: /categories/featured/
 
 <header class="archive-header">
   <h1>Featured</h1>
-  <p>Comics in this category.</p>
+  <p>ALL Comics in 'Featured' category.</p>
 </header>
+
+{% if page.description %}
+  <p class="archive-description">{{ page.description }}</p>
+{% endif %}
 
 <main class="archive-page">
   <div class="archive-list">

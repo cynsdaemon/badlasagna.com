@@ -381,6 +381,15 @@ a[href^="http"]
   line-height: 1.6;
 }
 
+.archive-description {
+  color: #e6e6e6;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: -0.5rem auto 1.5rem auto;
+  max-width: 700px;
+  text-align: center;
+}
+
 .resource-list li {
   margin-bottom: 0.5rem;
 }

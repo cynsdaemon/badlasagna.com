@@ -2,6 +2,7 @@
 layout: default
 title: "Comics in category: Emotional Support"
 permalink: /categories/emotional-support/
+description: "Soft, reassuring comics for the days when you need a little extra care."
 ---
 
 <head>
@@ -10,8 +11,12 @@ permalink: /categories/emotional-support/
 
 <header class="archive-header">
   <h1>Emotional Support</h1>
-  <p>Comics in this category.</p>
+  <p>ALL Comics in 'Emotional Support' category.</p>
 </header>
+
+{% if page.description %}
+  <p class="archive-description">{{ page.description }}</p>
+{% endif %}
 
 <main class="archive-page">
   <div class="archive-list">

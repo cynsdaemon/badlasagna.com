@@ -2,6 +2,7 @@
 layout: default
 title: "Comics in category: Adulting is hard"
 permalink: /categories/adulting-is-hard/
+description: "Comics for the everyday chaos of growing up, somehow still trying."
 ---
 
 <head>
@@ -10,8 +11,12 @@ permalink: /categories/adulting-is-hard/
 
 <header class="archive-header">
   <h1>Adulting is hard</h1>
-  <p>Comics in this category.</p>
+  <p>ALL Comics in 'Adulting is hard' category.</p>
 </header>
+
+{% if page.description %}
+  <p class="archive-description">{{ page.description }}</p>
+{% endif %}
 
 <main class="archive-page">
   <div class="archive-list">
