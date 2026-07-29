@@ -2,6 +2,15 @@
 layout: default
 title: "Comic Categories"
 permalink: /categories/
+category_order:
+  - Start Here
+  - Featured
+  - Dating Confections
+  - Emotional Support
+  - Snackcident Report
+  - Adulting is hard
+  - Flowcharts
+  - Miscellaney
 ---
 
 <head>
@@ -16,7 +25,9 @@ permalink: /categories/
 <main class="archive-page">
   <div class="archive-list">
 
+    {% assign preferred_categories = page.category_order %}
     {% assign all_categories = '' | split: ',' %}
+
     {% for comic in site.comics %}
       {% for category in comic.categories %}
         {% unless all_categories contains category %}
@@ -25,8 +36,23 @@ permalink: /categories/
       {% endfor %}
     {% endfor %}
 
+    {% assign display_categories = '' | split: ',' %}
+
+    {% for category in preferred_categories %}
+      {% if all_categories contains category %}
+        {% assign display_categories = display_categories | push: category %}
+      {% endif %}
+    {% endfor %}
+
     {% for category in all_categories %}
-      <a href="/categories/{{ category | slugify }}/" class="archive-item archive-link">
+      {% unless preferred_categories contains category %}
+        {% assign display_categories = display_categories | push: category %}
+      {% endunless %}
+    {% endfor %}
+
+    {% for category in display_categories %}
+      {% assign category_slug = category | slugify %}
+      <a href="/categories/{{ category_slug }}/" class="archive-item archive-link">
         <div class="archive-item-inner">
           <div class="archive-meta">
             <span class="archive-title">{{ category }}</span>
