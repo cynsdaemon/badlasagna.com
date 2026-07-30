@@ -21,7 +21,7 @@ description: "Comics about dating, romance, and sweet chaos."
 <main class="archive-page">
   <div class="archive-list">
 
-    {% assign category_name = 'dating confections' %}
+    {% assign category_name = 'Dating Confections' %}
     {% assign pages = site.comics | where_exp: "comic", "comic.categories contains category_name" | sort: "comic_order" %}
     {% for p in pages %}
       <a href="{{ p.url }}" class="archive-item archive-link">

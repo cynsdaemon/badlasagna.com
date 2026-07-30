@@ -21,7 +21,7 @@ description: "Stories about quiet chaos, social energy, and surviving the day."
 <main class="archive-page">
   <div class="archive-list">
 
-    {% assign category_name = 'introverts' %}
+    {% assign category_name = 'Introverts' %}
     {% assign pages = site.comics | where_exp: "comic", "comic.categories contains category_name" | sort: "comic_order" %}
     {% for p in pages %}
       <a href="{{ p.url }}" class="archive-item archive-link">
