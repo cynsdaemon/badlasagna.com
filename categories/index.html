@@ -17,13 +17,13 @@ category_order:
   <link rel="icon" type="image/png" href="/assets/images/site/favicon.png">
 </head>
 
-<header class="archive-header">
-  <h1>ALL Comic Categories</h1>
+<header class="archive-header comic-landing-header">
+  <h1>All Comic Categories</h1>
   <p>Browse comics by category.</p>
 </header>
 
 <main class="archive-page">
-  <div class="archive-list">
+  <div class="comic-card-grid category-card-grid">
 
     {% assign preferred_categories = page.category_order %}
     {% assign all_categories = '' | split: ',' %}
@@ -52,13 +52,19 @@ category_order:
 
     {% for category in display_categories %}
       {% assign category_slug = category | slugify %}
-      <a href="/categories/{{ category_slug }}/" class="archive-item archive-link">
-        <div class="archive-item-inner">
-          <div class="archive-meta">
-            <span class="archive-title">{{ category }}</span>
+      {% assign category_initial = category | slice: 0, 1 | upcase %}
+      {% assign category_key = category | downcase %}
+      <article class="comic-card category-card category-card--{{ category_key | replace: ' ', '-' }}">
+        <a href="/categories/{{ category_slug }}/" class="comic-card-link">
+          <div class="comic-card-thumb category-thumb">
+            <div class="bl-monogram">{{ category_initial }}</div>
           </div>
-        </div>
-      </a>
+          <div class="comic-card-content">
+            <h2>{{ category }}</h2>
+            <p class="comic-card-number">Browse this category</p>
+          </div>
+        </a>
+      </article>
     {% endfor %}
 
   </div>

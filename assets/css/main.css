@@ -451,6 +451,72 @@ a[href^="http"]
   margin-top: 2rem;
 }
 
+.category-card-grid {
+  margin-top: 1rem;
+}
+
+.category-card {
+  min-height: 100%;
+}
+
+.category-card .comic-card-thumb {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.category-thumb {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  min-height: 180px;
+}
+
+.category-thumb .bl-monogram {
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 12px rgba(255, 229, 92, 0.16);
+  height: 110px;
+  width: 110px;
+}
+
+.category-card .comic-card-content {
+  padding-top: 0.9rem;
+}
+
+.category-card .comic-card-number {
+  margin-bottom: 0.6rem;
+}
+
+.category-card--start-here {
+  background: linear-gradient(135deg, rgba(255, 229, 92, 0.14), rgba(255, 111, 174, 0.12));
+}
+
+.category-card--featured {
+  background: linear-gradient(135deg, rgba(179, 139, 255, 0.16), rgba(255, 229, 92, 0.12));
+}
+
+.category-card--dating-confections {
+  background: linear-gradient(135deg, rgba(255, 111, 174, 0.16), rgba(255, 229, 92, 0.12));
+}
+
+.category-card--emotional-support {
+  background: linear-gradient(135deg, rgba(198, 179, 255, 0.16), rgba(255, 219, 153, 0.12));
+}
+
+.category-card--snackcident-report {
+  background: linear-gradient(135deg, rgba(255, 219, 153, 0.18), rgba(255, 111, 174, 0.12));
+}
+
+.category-card--adulting-is-hard {
+  background: linear-gradient(135deg, rgba(255, 229, 92, 0.16), rgba(198, 179, 255, 0.12));
+}
+
+.category-card--flowcharts {
+  background: linear-gradient(135deg, rgba(198, 179, 255, 0.16), rgba(255, 111, 174, 0.12));
+}
+
+.category-card--miscellaney {
+  background: linear-gradient(135deg, rgba(255, 219, 153, 0.16), rgba(179, 139, 255, 0.12));
+}
+
 .archive-item {
   background: rgba(255, 255, 255, 0.04);
   border: 1px solid rgba(255, 255, 255, 0.08);
