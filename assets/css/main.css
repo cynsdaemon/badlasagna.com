@@ -372,10 +372,21 @@ a[href^="http"]
   transition: transform 0.15s ease, background 0.2s ease, box-shadow 0.2s ease;
 }
 
+.comic-card.featured {
+  background: linear-gradient(135deg, rgba(255, 229, 92, 0.16), rgba(255, 111, 174, 0.14));
+  border: 1px solid rgba(255, 219, 153, 0.35);
+  box-shadow: 0 8px 24px rgba(255, 229, 92, 0.16);
+}
+
 .comic-card:hover {
   background: rgba(255, 255, 255, 0.06);
   box-shadow: 0 6px 18px rgba(255, 229, 92, 0.16);
   transform: translateY(-3px);
+}
+
+.comic-card.featured:hover {
+  box-shadow: 0 10px 28px rgba(255, 229, 92, 0.22);
+  transform: translateY(-4px);
 }
 
 .comic-card-link {
@@ -406,6 +417,20 @@ a[href^="http"]
   font-size: 0.9rem;
   letter-spacing: 0.08em;
   margin: 0 0 0.4rem 0;
+  text-transform: uppercase;
+}
+
+.comic-card-badge {
+  background: rgba(255, 219, 153, 0.16);
+  border: 1px solid rgba(255, 219, 153, 0.35);
+  border-radius: 999px;
+  color: #ffe55c;
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  margin: 0 0 0.7rem 0;
+  padding: 0.3rem 0.7rem;
   text-transform: uppercase;
 }
 

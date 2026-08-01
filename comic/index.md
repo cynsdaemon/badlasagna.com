@@ -13,7 +13,7 @@ permalink: /comic/
   <div class="comic-card-grid">
     {% assign comics = site.comics | sort: "comic_order" %}
     {% for comic in comics %}
-      <article class="comic-card">
+      <article class="comic-card{% if forloop.last %} featured{% endif %}">
         <a href="{{ comic.url }}" class="comic-card-link">
           <div class="comic-card-thumb">
             {% if comic.thumb %}
@@ -26,6 +26,9 @@ permalink: /comic/
           </div>
           <div class="comic-card-content">
             <p class="comic-card-number">Episode {{ comic.comic_order | default: 1 }}</p>
+            {% if forloop.last %}
+              <span class="comic-card-badge">Latest Episode</span>
+            {% endif %}
             <h2>{{ comic.title }}</h2>
           </div>
         </a>
