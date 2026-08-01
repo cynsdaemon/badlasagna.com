@@ -327,6 +327,95 @@ a[href^="http"]
 }
 
 /* =========================================================
+   COMIC LANDING PAGE
+   ========================================================= */
+
+.comic-landing-page {
+  margin: 2rem auto 0;
+  max-width: 1000px;
+}
+
+.comic-landing-header {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.comic-landing-header h1 {
+  color: #FFDB99;
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.comic-landing-header p {
+  color: #e6e6e6;
+  margin: 0 auto;
+  max-width: 700px;
+}
+
+.comic-card-grid {
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 700px) {
+  .comic-card-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.comic-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  overflow: hidden;
+  transition: transform 0.15s ease, background 0.2s ease, box-shadow 0.2s ease;
+}
+
+.comic-card:hover {
+  background: rgba(255, 255, 255, 0.06);
+  box-shadow: 0 6px 18px rgba(255, 229, 92, 0.16);
+  transform: translateY(-3px);
+}
+
+.comic-card-link {
+  color: inherit;
+  display: block;
+  text-decoration: none;
+}
+
+.comic-card-thumb {
+  background: rgba(255, 255, 255, 0.03);
+  padding: 1rem;
+}
+
+.comic-card-thumb img {
+  border-radius: 10px;
+  display: block;
+  height: auto;
+  margin: 0;
+  width: 100%;
+}
+
+.comic-card-content {
+  padding: 1rem 1.25rem 1.25rem;
+}
+
+.comic-card-number {
+  color: #ffe55c;
+  font-size: 0.9rem;
+  letter-spacing: 0.08em;
+  margin: 0 0 0.4rem 0;
+  text-transform: uppercase;
+}
+
+.comic-card h2 {
+  color: #FFDB99;
+  font-size: 1.25rem;
+  margin: 0;
+}
+
+/* =========================================================
    ARCHIVE PAGE
    ========================================================= */
 
